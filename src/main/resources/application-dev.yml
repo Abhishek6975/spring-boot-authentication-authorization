@@ -1,0 +1,78 @@
+spring:
+  application:
+    name: authentication-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_app
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: abhi123
+    hikari:
+      pool-name: neon-hikari
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000        # 30s
+      connection-timeout: 20000  # 20s
+      max-lifetime: 1800000      # 30m (keep below Neon’s TCP idle timeouts)
+      validation-timeout: 5000
+      leak-detection-threshold: 0
+      initialization-fail-timeout: -1
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql : true
+  security:
+  #    oauth2 configurations
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:test-client-id}
+            client-secret: ${GOOGLE_CLIENT_SECRET:test-client-secret}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+              #/login/oauth2/code/google
+            scope:
+                - email
+                - profile
+                - openid
+          github:
+            client-id: ${GITHUB_CLIENT_ID:test-client-id}
+            client-secret: ${GITHUB_CLIENT_SECRET:test-client-secret}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            #/login/oauth2/code/github
+            scope:
+              - user:email
+              - read:user
+
+logging:
+  level:
+    org.springframework.security: DEBUG        # Logs everything related to Spring Security
+    org.springframework.security.web: DEBUG    # Logs security filter chain & authentication checks
+    org.springframework.web: DEBUG             # Logs incoming web requests
+    org.hibernate.SQL: debug                   # (optional) shows executed SQL queries
+    org.hibernate.type.descriptor.sql: trace   # (optional) shows SQL parameters
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:9b14f5e214dbbb19a11d93714c20e9e0f91bd2920e423a9233f939dc881fa74a}
+    issuer: ${JWT_ISSUER:auth-backend}
+    access-ttl-seconds: ${JWT_ACCESS_TTL_SECONDS:3600}       # 60 minutes
+    refresh-ttl-seconds: ${JWT_REFRESH_TTL_SECONDS:1209600}  # 14 days
+    refresh-cookie-name: ${JWT_REFRESH_COOKIE_NAME:refresh_token}
+    cookie-http-only: ${JWT_COOKIE_HTTP_ONLY:true}
+    cookie-secure: ${JWT_COOKIE_SECURE:true}
+    cookie-same-site: ${JWT_COOKIE_SAME_SITE:Lax}
+    cookie-domain: ${JWT_COOKIE_DOMAIN:localhost}
+
+app:
+  auth:
+    frontend:
+      success-redirect: http://localhost:5173/oauth/success
+      failure-redirect: http://localhost:5173/oauth/failure
+
+

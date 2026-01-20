@@ -1,0 +1,1199 @@
+2026-17-25 00:25:11.407 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-25 00:25:11.508 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 19188 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-25 00:25:11.509 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-25 00:25:13.097 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-25 00:25:13.212 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2026-17-25 00:25:14.460 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2026-17-25 00:25:14.479 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2026-17-25 00:25:14.484 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-25 00:25:14.485 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-25 00:25:14.601 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-25 00:25:14.602 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3017 ms
+2026-17-25 00:25:14.899 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-25 00:25:14.961 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-25 00:25:15.006 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-25 00:25:15.360 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-25 00:25:15.408 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-25 00:25:15.443 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-25 00:25:16.021 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-25 00:25:16.023 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-25 00:25:16.046 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-25 00:25:16.056 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@85cd413) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@688d2a5d)
+2026-17-25 00:25:16.056 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2842c098) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2820b369)
+2026-17-25 00:25:16.056 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@46b21632) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@476c137b)
+2026-17-25 00:25:16.057 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@79144d0e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@540212be)
+2026-17-25 00:25:16.057 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2579d8a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2507a170)
+2026-17-25 00:25:16.057 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7e20f4e3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3af39e7b)
+2026-17-25 00:25:16.057 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f6ff62) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1c62d2ad)
+2026-17-25 00:25:16.057 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@651caa2e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@433ae0b0)
+2026-17-25 00:25:16.058 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@70840a5a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7af9595d)
+2026-17-25 00:25:17.076 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-25 00:25:17.197 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-25 00:25:18.168 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-25 00:25:18.478 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-25 00:25:18.668 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-25 00:25:18.877 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-25 00:25:19.178 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-25 00:25:19.357 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-25 00:25:19.453 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-25 00:25:19.807 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2026-17-25 00:25:19.832 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2026-17-25 00:25:19.845 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 8.995 seconds (process running for 9.97)
+2026-17-26 00:26:10.712 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-26 00:26:10.732 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-26 00:26:10.737 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-26 00:26:10.740 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-26 00:26:10.745 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-29 00:29:43.874 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-29 00:29:43.963 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 12500 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-29 00:29:43.964 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-29 00:29:45.385 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-29 00:29:45.488 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2026-17-29 00:29:46.643 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2026-17-29 00:29:46.659 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2026-17-29 00:29:46.662 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-29 00:29:46.663 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-29 00:29:46.757 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-29 00:29:46.757 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2713 ms
+2026-17-29 00:29:47.098 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-29 00:29:47.196 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-29 00:29:47.240 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-29 00:29:47.614 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-29 00:29:47.660 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-29 00:29:47.685 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-29 00:29:48.266 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-29 00:29:48.268 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-29 00:29:48.300 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-29 00:29:48.311 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2579d8a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2507a170)
+2026-17-29 00:29:48.311 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7e20f4e3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3af39e7b)
+2026-17-29 00:29:48.311 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f6ff62) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c62d2ad)
+2026-17-29 00:29:48.312 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@651caa2e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@433ae0b0)
+2026-17-29 00:29:48.312 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@70840a5a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7af9595d)
+2026-17-29 00:29:48.312 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7a34c1f6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6e9f8160)
+2026-17-29 00:29:48.312 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3e998033) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@e1a150c)
+2026-17-29 00:29:48.312 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@527d5e48) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@407b41e6)
+2026-17-29 00:29:48.312 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3291d9c2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6cfd08e9)
+2026-17-29 00:29:49.358 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-29 00:29:49.483 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-29 00:29:50.405 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-29 00:29:50.740 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-29 00:29:50.929 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-29 00:29:51.137 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-29 00:29:51.379 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-29 00:29:51.547 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-29 00:29:51.637 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-29 00:29:52.056 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2026-17-29 00:29:52.099 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2026-17-29 00:29:52.124 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 8.826 seconds (process running for 9.756)
+2026-17-29 00:29:57.369 INFO  [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-29 00:29:57.370 INFO  [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-29 00:29:57.370 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-29 00:29:57.370 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-29 00:29:57.370 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-29 00:29:57.371 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5e18a6a7
+2026-17-29 00:29:57.373 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@54bf2319
+2026-17-29 00:29:57.373 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-29 00:29:57.373 INFO  [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-17-29 00:29:57.400 DEBUG [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-17-29 00:29:57.410 DEBUG [http-nio-8083-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.411 DEBUG [http-nio-8083-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.415 DEBUG [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-17-29 00:29:57.419 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-17-29 00:29:57.422 DEBUG [http-nio-8083-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.470 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.519 DEBUG [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2026-17-29 00:29:57.520 DEBUG [http-nio-8083-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.521 DEBUG [http-nio-8083-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.521 DEBUG [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2026-17-29 00:29:57.521 DEBUG [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2026-17-29 00:29:57.526 DEBUG [http-nio-8083-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.532 DEBUG [http-nio-8083-exec-3] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2026-17-29 00:29:57.534 DEBUG [http-nio-8083-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.535 DEBUG [http-nio-8083-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.536 DEBUG [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.537 DEBUG [http-nio-8083-exec-3] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2026-17-29 00:29:57.538 DEBUG [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2026-17-29 00:29:57.540 DEBUG [http-nio-8083-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.545 DEBUG [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.547 DEBUG [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-17-29 00:29:57.547 DEBUG [http-nio-8083-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.548 DEBUG [http-nio-8083-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.548 DEBUG [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-17-29 00:29:57.548 DEBUG [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2026-17-29 00:29:57.550 DEBUG [http-nio-8083-exec-5] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.557 DEBUG [http-nio-8083-exec-8] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-17-29 00:29:57.558 DEBUG [http-nio-8083-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.559 DEBUG [http-nio-8083-exec-8] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.560 DEBUG [http-nio-8083-exec-8] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-17-29 00:29:57.571 DEBUG [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-17-29 00:29:57.572 DEBUG [http-nio-8083-exec-8] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.573 DEBUG [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-17-29 00:29:57.583 DEBUG [http-nio-8083-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.583 DEBUG [http-nio-8083-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.587 DEBUG [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-17-29 00:29:57.587 DEBUG [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2026-17-29 00:29:57.590 DEBUG [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.591 DEBUG [http-nio-8083-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.648 DEBUG [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.666 DEBUG [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.880 DEBUG [http-nio-8083-exec-9] o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-17-29 00:29:57.882 DEBUG [http-nio-8083-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.882 DEBUG [http-nio-8083-exec-9] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.882 DEBUG [http-nio-8083-exec-9] o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-17-29 00:29:57.884 DEBUG [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-17-29 00:29:57.885 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-17-29 00:29:57.890 DEBUG [http-nio-8083-exec-6] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-17-29 00:29:57.891 DEBUG [http-nio-8083-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.892 DEBUG [http-nio-8083-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.892 DEBUG [http-nio-8083-exec-6] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-17-29 00:29:57.892 DEBUG [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-17-29 00:29:57.893 DEBUG [http-nio-8083-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-29 00:29:57.900 DEBUG [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.919 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-17-29 00:29:57.953 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8083/swagger-ui/oauth2-re (truncated)...]
+2026-17-29 00:29:57.963 DEBUG [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-29 00:29:57.989 DEBUG [http-nio-8083-exec-7] o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-17-29 00:29:57.990 DEBUG [http-nio-8083-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-29 00:29:57.991 DEBUG [http-nio-8083-exec-7] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-29 00:29:57.991 DEBUG [http-nio-8083-exec-7] o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-17-29 00:29:57.991 DEBUG [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-17-29 00:29:57.992 DEBUG [http-nio-8083-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-17-29 00:29:58.893 INFO  [http-nio-8083-exec-7] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 877 ms
+2026-17-29 00:29:58.942 DEBUG [http-nio-8083-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-17-29 00:29:58.948 DEBUG [http-nio-8083-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-17-29 00:29:58.950 DEBUG [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.138 DEBUG [http-nio-8083-exec-10] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-17-30 00:30:06.139 DEBUG [http-nio-8083-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.139 DEBUG [http-nio-8083-exec-10] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.140 DEBUG [http-nio-8083-exec-10] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-17-30 00:30:06.140 DEBUG [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-17-30 00:30:06.141 DEBUG [http-nio-8083-exec-10] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.145 DEBUG [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.165 DEBUG [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2026-17-30 00:30:06.165 DEBUG [http-nio-8083-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.166 DEBUG [http-nio-8083-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.166 DEBUG [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2026-17-30 00:30:06.166 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2026-17-30 00:30:06.167 DEBUG [http-nio-8083-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.169 DEBUG [http-nio-8083-exec-3] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-17-30 00:30:06.172 DEBUG [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2026-17-30 00:30:06.172 DEBUG [http-nio-8083-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.172 DEBUG [http-nio-8083-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.172 DEBUG [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-3] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2026-17-30 00:30:06.173 DEBUG [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-17-30 00:30:06.174 DEBUG [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-17-30 00:30:06.174 DEBUG [http-nio-8083-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.174 DEBUG [http-nio-8083-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.174 DEBUG [http-nio-8083-exec-5] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.174 DEBUG [http-nio-8083-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.178 DEBUG [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.182 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.183 DEBUG [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.192 DEBUG [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.210 DEBUG [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.283 DEBUG [http-nio-8083-exec-8] o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-17-30 00:30:06.284 DEBUG [http-nio-8083-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.284 DEBUG [http-nio-8083-exec-8] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.284 DEBUG [http-nio-8083-exec-8] o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-17-30 00:30:06.284 DEBUG [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-17-30 00:30:06.285 DEBUG [http-nio-8083-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-17-30 00:30:06.285 DEBUG [http-nio-8083-exec-6] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-17-30 00:30:06.285 DEBUG [http-nio-8083-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.286 DEBUG [http-nio-8083-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.286 DEBUG [http-nio-8083-exec-6] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-17-30 00:30:06.286 DEBUG [http-nio-8083-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-17-30 00:30:06.286 DEBUG [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-17-30 00:30:06.286 DEBUG [http-nio-8083-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8083/swagger-ui/oauth2-re (truncated)...]
+2026-17-30 00:30:06.289 DEBUG [http-nio-8083-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.290 DEBUG [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.294 DEBUG [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.313 DEBUG [http-nio-8083-exec-9] o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-17-30 00:30:06.314 DEBUG [http-nio-8083-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.314 DEBUG [http-nio-8083-exec-9] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.314 DEBUG [http-nio-8083-exec-9] o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-17-30 00:30:06.315 DEBUG [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-17-30 00:30:06.315 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-17-30 00:30:06.319 DEBUG [http-nio-8083-exec-7] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-17-30 00:30:06.319 DEBUG [http-nio-8083-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-30 00:30:06.319 DEBUG [http-nio-8083-exec-7] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-30 00:30:06.319 DEBUG [http-nio-8083-exec-7] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-17-30 00:30:06.321 DEBUG [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-17-30 00:30:06.321 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-17-30 00:30:06.322 DEBUG [http-nio-8083-exec-7] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-30 00:30:06.329 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-17-30 00:30:06.330 DEBUG [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-30 00:30:06.332 DEBUG [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-47 00:47:55.843 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-47 00:47:55.878 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-47 00:47:55.893 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-47 00:47:55.906 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-47 00:47:55.911 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-47 00:47:58.291 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-47 00:47:58.356 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 7824 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-47 00:47:58.357 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-48 00:48:00.018 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-48 00:48:00.220 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 172 ms. Found 2 JPA repository interfaces.
+2026-17-48 00:48:02.137 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2026-17-48 00:48:02.166 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2026-17-48 00:48:02.171 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-48 00:48:02.172 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-48 00:48:02.357 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-48 00:48:02.358 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3952 ms
+2026-17-48 00:48:02.735 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-48 00:48:02.862 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-48 00:48:02.919 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-48 00:48:03.426 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-48 00:48:03.503 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-48 00:48:03.536 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-48 00:48:04.335 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-48 00:48:04.340 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-48 00:48:04.395 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-48 00:48:04.409 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@433ae0b0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@70840a5a)
+2026-17-48 00:48:04.409 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7af9595d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a34c1f6)
+2026-17-48 00:48:04.409 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6e9f8160) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3e998033)
+2026-17-48 00:48:04.409 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@e1a150c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@527d5e48)
+2026-17-48 00:48:04.410 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@407b41e6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3291d9c2)
+2026-17-48 00:48:04.410 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6cfd08e9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@54ca9420)
+2026-17-48 00:48:04.410 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4ea48b2e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@72c704f1)
+2026-17-48 00:48:04.410 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@76f9e000) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7612116b)
+2026-17-48 00:48:04.410 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c05097c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@562f6681)
+2026-17-48 00:48:06.054 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-48 00:48:06.230 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-48 00:48:07.490 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-48 00:48:07.977 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-48 00:48:08.287 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-48 00:48:08.622 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-48 00:48:08.905 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-48 00:48:09.107 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-48 00:48:09.263 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-48 00:48:09.732 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2026-17-48 00:48:09.810 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2026-17-48 00:48:09.837 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 12.007 seconds (process running for 12.72)
+2026-17-48 00:48:26.529 INFO  [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-48 00:48:26.529 INFO  [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-48 00:48:26.530 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-48 00:48:26.530 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-48 00:48:26.530 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-48 00:48:26.534 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@32ff3c98
+2026-17-48 00:48:26.535 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3edc999f
+2026-17-48 00:48:26.536 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-48 00:48:26.537 INFO  [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-17-48 00:48:26.565 DEBUG [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-17-48 00:48:26.580 DEBUG [http-nio-8083-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.581 DEBUG [http-nio-8083-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.586 DEBUG [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-17-48 00:48:26.592 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-17-48 00:48:26.596 DEBUG [http-nio-8083-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.646 DEBUG [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.684 DEBUG [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2026-17-48 00:48:26.685 DEBUG [http-nio-8083-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.685 DEBUG [http-nio-8083-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.687 DEBUG [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2026-17-48 00:48:26.691 DEBUG [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2026-17-48 00:48:26.695 DEBUG [http-nio-8083-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-6] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2026-17-48 00:48:26.697 DEBUG [http-nio-8083-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.698 DEBUG [http-nio-8083-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.698 DEBUG [http-nio-8083-exec-6] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-17-48 00:48:26.698 DEBUG [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-17-48 00:48:26.696 DEBUG [http-nio-8083-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.700 DEBUG [http-nio-8083-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.700 DEBUG [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-17-48 00:48:26.700 DEBUG [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2026-17-48 00:48:26.701 DEBUG [http-nio-8083-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.701 DEBUG [http-nio-8083-exec-5] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.700 DEBUG [http-nio-8083-exec-3] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2026-17-48 00:48:26.709 DEBUG [http-nio-8083-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.710 DEBUG [http-nio-8083-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.724 DEBUG [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.731 DEBUG [http-nio-8083-exec-3] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2026-17-48 00:48:26.734 DEBUG [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2026-17-48 00:48:26.735 DEBUG [http-nio-8083-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.735 DEBUG [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.744 DEBUG [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.754 DEBUG [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.824 DEBUG [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.956 DEBUG [http-nio-8083-exec-7] o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-17-48 00:48:26.957 DEBUG [http-nio-8083-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.957 DEBUG [http-nio-8083-exec-7] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.958 DEBUG [http-nio-8083-exec-7] o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-17-48 00:48:26.958 DEBUG [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-17-48 00:48:26.958 DEBUG [http-nio-8083-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-17-48 00:48:26.958 DEBUG [http-nio-8083-exec-8] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-17-48 00:48:26.959 DEBUG [http-nio-8083-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:26.959 DEBUG [http-nio-8083-exec-8] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:26.959 DEBUG [http-nio-8083-exec-8] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-17-48 00:48:26.960 DEBUG [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-17-48 00:48:26.961 DEBUG [http-nio-8083-exec-8] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-17-48 00:48:26.964 DEBUG [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:26.981 DEBUG [http-nio-8083-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-17-48 00:48:27.017 DEBUG [http-nio-8083-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8083/swagger-ui/oauth2-re (truncated)...]
+2026-17-48 00:48:27.029 DEBUG [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-48 00:48:27.056 DEBUG [http-nio-8083-exec-9] o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-17-48 00:48:27.056 DEBUG [http-nio-8083-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-48 00:48:27.056 DEBUG [http-nio-8083-exec-9] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-48 00:48:27.057 DEBUG [http-nio-8083-exec-9] o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-17-48 00:48:27.058 DEBUG [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-17-48 00:48:27.058 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-17-48 00:48:27.716 INFO  [http-nio-8083-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 643 ms
+2026-17-48 00:48:27.757 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-17-48 00:48:27.759 DEBUG [http-nio-8083-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-17-48 00:48:27.760 DEBUG [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-17-21 01:21:55.484 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-21 01:21:55.544 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-21 01:21:55.583 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-21 01:21:55.619 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-21 01:21:55.629 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-58 01:58:12.331 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-58 01:58:12.419 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 2436 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-58 01:58:12.420 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-58 01:58:13.843 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-58 01:58:13.963 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
+2026-17-58 01:58:15.438 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-58 01:58:15.459 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-58 01:58:15.462 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-58 01:58:15.462 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-58 01:58:15.565 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-58 01:58:15.566 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3083 ms
+2026-17-58 01:58:15.895 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-58 01:58:16.003 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-58 01:58:16.050 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-58 01:58:16.518 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-58 01:58:16.558 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-58 01:58:16.583 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-58 01:58:17.372 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-58 01:58:17.374 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-58 01:58:17.406 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-58 01:58:17.419 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4805069b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@14ca88bc)
+2026-17-58 01:58:17.420 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@f01fc6d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@85cd413)
+2026-17-58 01:58:17.420 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@688d2a5d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2842c098)
+2026-17-58 01:58:17.420 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2820b369) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@46b21632)
+2026-17-58 01:58:17.420 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@476c137b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@79144d0e)
+2026-17-58 01:58:17.421 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@540212be) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2579d8a)
+2026-17-58 01:58:17.421 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2507a170) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7e20f4e3)
+2026-17-58 01:58:17.421 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3af39e7b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4f6ff62)
+2026-17-58 01:58:17.421 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c62d2ad) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@651caa2e)
+2026-17-58 01:58:18.518 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-58 01:58:18.735 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-58 01:58:19.575 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-58 01:58:19.860 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-58 01:58:20.047 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-58 01:58:20.277 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-58 01:58:20.564 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-58 01:58:20.723 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-58 01:58:20.821 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-58 01:58:21.249 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-58 01:58:21.273 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-58 01:58:21.285 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 9.535 seconds (process running for 10.462)
+2026-17-59 01:59:42.482 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-59 01:59:42.484 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-59 01:59:42.484 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-59 01:59:42.485 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-59 01:59:42.485 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-59 01:59:42.489 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1469015e
+2026-17-59 01:59:42.491 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7225583d
+2026-17-59 01:59:42.492 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-59 01:59:42.492 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-17-59 01:59:42.550 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-59 01:59:42.574 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-59 01:59:42.575 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-59 01:59:42.581 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-59 01:59:42.588 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-59 01:59:42.596 DEBUG [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-59 01:59:42.624 DEBUG [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-59 01:59:42.639 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-59 01:59:42.819 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-59 01:59:42.844 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-59 01:59:42.894 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-59 01:59:42.897 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-59 01:59:43.012 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-59 01:59:43.013 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-59 01:59:43.014 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-59 01:59:47.116 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-59 01:59:47.117 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-59 01:59:47.119 DEBUG [http-nio-8080-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-59 01:59:47.120 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-59 01:59:47.121 DEBUG [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-59 01:59:47.124 DEBUG [http-nio-8080-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-59 01:59:47.126 DEBUG [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-59 01:59:47.129 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-59 01:59:47.130 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-59 01:59:47.132 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-59 01:59:47.134 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-59 01:59:47.135 DEBUG [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-59 01:59:47.173 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-59 01:59:47.175 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-59 01:59:47.176 DEBUG [http-nio-8080-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-01 02:01:05.144 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-01 02:01:05.164 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-01 02:01:05.170 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-01 02:01:05.173 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-01 02:01:05.178 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-01 02:01:09.931 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-01 02:01:10.008 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 3172 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-01 02:01:10.010 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-01 02:01:11.552 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-01 02:01:11.684 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2026-17-01 02:01:12.962 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-01 02:01:12.987 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-01 02:01:12.991 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-01 02:01:12.991 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-01 02:01:13.101 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-01 02:01:13.102 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3029 ms
+2026-17-01 02:01:13.415 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-01 02:01:13.501 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-01 02:01:13.553 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-01 02:01:13.976 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-01 02:01:14.020 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-01 02:01:14.049 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-01 02:01:14.650 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-01 02:01:14.651 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-01 02:01:14.677 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-01 02:01:14.694 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@21e39b82) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5f9a8ddc)
+2026-17-01 02:01:14.695 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1280bae3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@256a5df0)
+2026-17-01 02:01:14.695 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1868ed54) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@131777e8)
+2026-17-01 02:01:14.695 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@45790cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@73a5d86c)
+2026-17-01 02:01:14.695 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2cf88901) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4780341)
+2026-17-01 02:01:14.695 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c910acd) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@612ac38b)
+2026-17-01 02:01:14.696 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@9f2fe2e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4dd4965a)
+2026-17-01 02:01:14.696 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79273a4f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4e26987b)
+2026-17-01 02:01:14.696 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50bb1c1f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39342614)
+2026-17-01 02:01:16.004 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-01 02:01:16.131 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-01 02:01:17.059 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-01 02:01:17.363 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-01 02:01:17.534 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-01 02:01:17.756 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-01 02:01:18.045 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-01 02:01:18.240 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-01 02:01:18.341 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-01 02:01:18.723 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-01 02:01:18.750 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-01 02:01:18.761 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 9.356 seconds (process running for 10.181)
+2026-17-01 02:01:22.061 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-01 02:01:22.062 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-01 02:01:22.063 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-01 02:01:22.064 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-01 02:01:22.065 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-01 02:01:22.069 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e966e67
+2026-17-01 02:01:22.070 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@e36a4c1
+2026-17-01 02:01:22.071 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-01 02:01:22.072 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2026-17-01 02:01:22.122 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-01 02:01:22.147 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-01 02:01:22.148 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-01 02:01:22.154 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-01 02:01:22.161 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-01 02:01:22.164 DEBUG [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-01 02:01:22.179 DEBUG [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-01 02:01:22.185 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-01 02:01:22.337 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-01 02:01:22.368 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-01 02:01:22.420 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-01 02:01:22.422 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-01 02:01:22.461 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-01 02:01:22.462 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-01 02:01:22.463 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-01 02:01:25.366 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-01 02:01:25.368 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-01 02:01:25.369 DEBUG [http-nio-8080-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-01 02:01:25.369 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-01 02:01:25.370 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-01 02:01:25.372 DEBUG [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-01 02:01:25.373 DEBUG [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-01 02:01:25.375 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-01 02:01:25.378 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-01 02:01:25.379 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-01 02:01:25.382 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-01 02:01:25.383 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-01 02:01:25.415 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-01 02:01:25.416 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-01 02:01:25.416 DEBUG [http-nio-8080-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-04 02:04:39.481 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-04 02:04:39.509 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-04 02:04:39.520 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-04 02:04:39.524 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-04 02:04:39.528 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-04 02:04:43.548 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-04 02:04:43.636 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 9008 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-04 02:04:43.638 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-04 02:04:45.142 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-04 02:04:45.254 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2026-17-04 02:04:46.763 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-04 02:04:46.783 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-04 02:04:46.788 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-04 02:04:46.789 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-04 02:04:46.894 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-04 02:04:46.895 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3182 ms
+2026-17-04 02:04:47.207 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-04 02:04:47.273 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-04 02:04:47.316 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-04 02:04:47.710 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-04 02:04:47.762 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-04 02:04:47.801 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-04 02:04:48.447 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-04 02:04:48.449 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-04 02:04:48.489 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-04 02:04:48.507 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3dea1ecc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@105c6c9e)
+2026-17-04 02:04:48.507 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40a7974) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@8d5da7e)
+2026-17-04 02:04:48.507 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@65a4b9d6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@16ef1160)
+2026-17-04 02:04:48.507 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@41f90b10) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@67593f7b)
+2026-17-04 02:04:48.508 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2773504f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@497921d0)
+2026-17-04 02:04:48.508 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40d10264) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6edd4fe2)
+2026-17-04 02:04:48.508 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@53918b5e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5366575d)
+2026-17-04 02:04:48.508 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b6cad77) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1fca53a7)
+2026-17-04 02:04:48.508 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40dee07b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@21e39b82)
+2026-17-04 02:04:49.659 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-04 02:04:49.808 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-04 02:04:50.722 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-04 02:04:51.072 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-04 02:04:51.273 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-04 02:04:51.491 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-04 02:04:51.788 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-04 02:04:51.968 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-04 02:04:52.066 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-04 02:04:52.416 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-04 02:04:52.453 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-04 02:04:52.468 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 9.502 seconds (process running for 10.5)
+2026-17-05 02:05:16.192 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-05 02:05:16.193 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-05 02:05:16.194 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-05 02:05:16.194 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-05 02:05:16.194 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-05 02:05:16.196 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@485dfac9
+2026-17-05 02:05:16.196 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@148c571c
+2026-17-05 02:05:16.197 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-05 02:05:16.198 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-17-05 02:05:16.243 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-05 02:05:16.265 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-05 02:05:16.266 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-05 02:05:16.272 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-05 02:05:16.283 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-05 02:05:16.295 DEBUG [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-05 02:05:16.337 DEBUG [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-05 02:05:16.353 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-05 02:05:16.516 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-05 02:05:16.556 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-05 02:05:16.621 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-05 02:05:16.624 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-05 02:05:16.678 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-05 02:05:16.679 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-05 02:05:16.679 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-07 02:07:11.947 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-07 02:07:11.971 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-07 02:07:11.978 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-07 02:07:11.981 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-07 02:07:11.990 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-07 02:07:17.605 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-07 02:07:17.670 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 19772 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-07 02:07:17.672 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-07 02:07:19.033 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-07 02:07:19.148 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2026-17-07 02:07:20.467 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-07 02:07:20.489 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-07 02:07:20.493 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-07 02:07:20.494 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-07 02:07:20.613 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-07 02:07:20.615 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2885 ms
+2026-17-07 02:07:20.941 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-07 02:07:21.017 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-07 02:07:21.066 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-07 02:07:21.472 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-07 02:07:21.508 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-07 02:07:21.539 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-07 02:07:22.123 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-07 02:07:22.125 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-07 02:07:22.152 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-07 02:07:22.161 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@497921d0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40d10264)
+2026-17-07 02:07:22.162 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6edd4fe2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@53918b5e)
+2026-17-07 02:07:22.162 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5366575d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b6cad77)
+2026-17-07 02:07:22.162 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1fca53a7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40dee07b)
+2026-17-07 02:07:22.163 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@21e39b82) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5f9a8ddc)
+2026-17-07 02:07:22.163 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1280bae3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@256a5df0)
+2026-17-07 02:07:22.163 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1868ed54) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@131777e8)
+2026-17-07 02:07:22.163 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@45790cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@73a5d86c)
+2026-17-07 02:07:22.163 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2cf88901) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4780341)
+2026-17-07 02:07:23.240 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-07 02:07:23.372 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-07 02:07:24.340 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-07 02:07:24.698 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-07 02:07:24.933 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-07 02:07:25.145 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-07 02:07:25.486 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-07 02:07:25.710 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-07 02:07:25.793 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-07 02:07:26.173 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-07 02:07:26.229 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-07 02:07:26.247 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 9.197 seconds (process running for 10.036)
+2026-17-07 02:07:33.046 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-07 02:07:33.047 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-07 02:07:33.048 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-07 02:07:33.049 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-07 02:07:33.049 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-07 02:07:33.054 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4537c9f8
+2026-17-07 02:07:33.055 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2045a469
+2026-17-07 02:07:33.055 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-07 02:07:33.056 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-17-07 02:07:33.114 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-07 02:07:33.141 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-07 02:07:33.142 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-07 02:07:33.148 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-07 02:07:33.157 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-07 02:07:33.166 DEBUG [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-07 02:07:33.196 DEBUG [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-07 02:07:33.209 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-07 02:07:33.382 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-07 02:07:33.411 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-07 02:07:33.462 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-07 02:07:33.469 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-07 02:07:33.498 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-07 02:07:33.501 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-07 02:07:33.502 DEBUG [http-nio-8080-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-07 02:07:54.817 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-07 02:07:54.818 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-07 02:07:54.818 DEBUG [http-nio-8080-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-07 02:07:54.819 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-07 02:07:54.820 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-07 02:07:54.822 DEBUG [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-07 02:07:54.828 DEBUG [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-07 02:07:54.830 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-07 02:07:54.831 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-07 02:07:54.832 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-07 02:07:54.833 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-07 02:07:54.833 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-07 02:07:54.898 DEBUG [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-07 02:07:54.899 DEBUG [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-07 02:07:54.900 DEBUG [http-nio-8080-exec-7] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-11 02:11:37.910 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-11 02:11:37.912 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-11 02:11:37.913 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-11 02:11:37.913 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-11 02:11:37.913 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-11 02:11:37.916 DEBUG [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-11 02:11:37.920 DEBUG [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-11 02:11:37.921 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-11 02:11:37.923 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-11 02:11:37.924 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-11 02:11:37.927 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-11 02:11:37.929 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-11 02:11:37.969 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-11 02:11:37.971 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-11 02:11:37.972 DEBUG [http-nio-8080-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-11 02:11:38.804 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-11 02:11:38.805 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-11 02:11:38.806 DEBUG [http-nio-8080-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-11 02:11:38.806 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-11 02:11:38.807 DEBUG [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-11 02:11:38.808 DEBUG [http-nio-8080-exec-5] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-11 02:11:38.810 DEBUG [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-11 02:11:38.813 DEBUG [http-nio-8080-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-11 02:11:38.814 DEBUG [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-11 02:11:38.815 DEBUG [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-11 02:11:38.817 DEBUG [http-nio-8080-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-11 02:11:38.818 DEBUG [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-11 02:11:38.851 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-11 02:11:38.852 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-11 02:11:38.852 DEBUG [http-nio-8080-exec-8] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-11 02:11:38.963 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-11 02:11:38.964 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-11 02:11:38.964 DEBUG [http-nio-8080-exec-9] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-11 02:11:38.964 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-11 02:11:38.965 DEBUG [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-11 02:11:38.966 DEBUG [http-nio-8080-exec-9] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-11 02:11:38.967 DEBUG [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-11 02:11:38.968 DEBUG [http-nio-8080-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-11 02:11:38.969 DEBUG [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-11 02:11:38.969 DEBUG [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-11 02:11:38.971 DEBUG [http-nio-8080-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-11 02:11:38.972 DEBUG [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-11 02:11:39.002 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-11 02:11:39.004 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-11 02:11:39.004 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-15 02:15:04.637 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-15 02:15:04.659 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-15 02:15:04.666 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-15 02:15:04.671 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-15 02:15:04.678 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-15 02:15:07.381 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-15 02:15:07.455 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 16604 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-15 02:15:07.458 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-15 02:15:08.799 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-15 02:15:08.933 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 2 JPA repository interfaces.
+2026-17-15 02:15:10.208 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-15 02:15:10.230 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-15 02:15:10.234 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-15 02:15:10.234 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-15 02:15:10.342 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-15 02:15:10.343 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2828 ms
+2026-17-15 02:15:10.647 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-15 02:15:10.715 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-15 02:15:10.760 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-15 02:15:11.131 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-15 02:15:11.180 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-15 02:15:11.216 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-15 02:15:11.763 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-15 02:15:11.765 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-15 02:15:11.791 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a34c1f6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6e9f8160)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3e998033) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@e1a150c)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@527d5e48) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@407b41e6)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3291d9c2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6cfd08e9)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@54ca9420) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ea48b2e)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@72c704f1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@76f9e000)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7612116b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1c05097c)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@562f6681) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6f6f65a4)
+2026-17-15 02:15:11.805 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@990b86b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3dea1ecc)
+2026-17-15 02:15:12.857 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-15 02:15:12.998 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-15 02:15:13.868 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-15 02:15:14.172 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-15 02:15:14.346 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-15 02:15:14.541 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-15 02:15:14.814 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-15 02:15:15.021 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-15 02:15:15.097 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-15 02:15:15.533 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-15 02:15:15.558 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-15 02:15:15.576 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 8.728 seconds (process running for 9.572)
+2026-17-15 02:15:26.253 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-15 02:15:26.254 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-15 02:15:26.255 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-15 02:15:26.255 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-15 02:15:26.256 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-15 02:15:26.259 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5fe7454c
+2026-17-15 02:15:26.260 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@643bef2a
+2026-17-15 02:15:26.261 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-15 02:15:26.262 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-17-15 02:15:26.324 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-15 02:15:26.348 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-15 02:15:26.349 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-15 02:15:26.356 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-15 02:15:26.364 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-15 02:15:26.371 DEBUG [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-15 02:15:26.395 DEBUG [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-15 02:15:26.406 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-15 02:15:26.604 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-15 02:15:26.626 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-15 02:15:26.676 DEBUG [http-nio-8080-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-15 02:15:26.677 DEBUG [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-15 02:15:26.713 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-15 02:15:26.714 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-15 02:15:26.715 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-15 02:15:43.702 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-15 02:15:43.726 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-15 02:15:43.732 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-15 02:15:43.739 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-15 02:15:43.756 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-15 02:15:46.166 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-15 02:15:46.241 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 22480 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-15 02:15:46.242 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-15 02:15:47.720 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-15 02:15:47.835 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2026-17-15 02:15:49.059 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-15 02:15:49.077 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-15 02:15:49.082 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-15 02:15:49.083 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-15 02:15:49.194 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-15 02:15:49.194 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2890 ms
+2026-17-15 02:15:49.513 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-15 02:15:49.571 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-15 02:15:49.613 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-15 02:15:49.986 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-15 02:15:50.034 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-15 02:15:50.080 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-15 02:15:50.628 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-15 02:15:50.629 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-15 02:15:50.656 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-15 02:15:50.669 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6edd4fe2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@53918b5e)
+2026-17-15 02:15:50.670 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5366575d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b6cad77)
+2026-17-15 02:15:50.670 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1fca53a7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40dee07b)
+2026-17-15 02:15:50.670 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@21e39b82) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5f9a8ddc)
+2026-17-15 02:15:50.670 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1280bae3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@256a5df0)
+2026-17-15 02:15:50.670 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1868ed54) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@131777e8)
+2026-17-15 02:15:50.670 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@45790cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@73a5d86c)
+2026-17-15 02:15:50.671 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2cf88901) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4780341)
+2026-17-15 02:15:50.671 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3c910acd) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@612ac38b)
+2026-17-15 02:15:51.888 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-15 02:15:52.053 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-15 02:15:52.867 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-15 02:15:53.154 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-15 02:15:53.299 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-15 02:15:53.512 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-15 02:15:53.821 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-15 02:15:54.025 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-15 02:15:54.116 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-15 02:15:54.527 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-15 02:15:54.551 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-15 02:15:54.565 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 8.902 seconds (process running for 9.713)
+2026-17-15 02:15:58.690 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-15 02:15:58.691 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-15 02:15:58.692 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-15 02:15:58.692 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-15 02:15:58.693 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-15 02:15:58.696 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@136c3a6
+2026-17-15 02:15:58.697 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@201f0e84
+2026-17-15 02:15:58.699 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-15 02:15:58.699 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-17-15 02:15:58.760 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-15 02:15:58.791 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-15 02:15:58.792 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-15 02:15:58.801 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-15 02:15:58.810 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-15 02:15:58.817 DEBUG [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-15 02:15:58.856 DEBUG [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-15 02:15:58.895 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-15 02:15:59.060 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-15 02:15:59.103 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-15 02:15:59.166 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-15 02:15:59.168 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-15 02:15:59.204 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-15 02:15:59.204 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-15 02:15:59.204 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-20 02:20:41.589 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-20 02:20:41.623 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-20 02:20:41.636 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-20 02:20:41.650 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-20 02:20:41.668 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-20 02:20:52.299 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-20 02:20:52.518 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 12696 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-20 02:20:52.523 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-20 02:20:55.692 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-20 02:20:55.782 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+2026-17-20 02:20:57.254 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-20 02:20:57.276 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-20 02:20:57.280 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-20 02:20:57.281 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-20 02:20:57.426 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-20 02:20:57.426 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4730 ms
+2026-17-20 02:20:57.763 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-20 02:20:57.849 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-20 02:20:57.892 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-20 02:20:58.278 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-20 02:20:58.313 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-20 02:20:58.337 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-20 02:20:59.007 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-20 02:20:59.009 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-20 02:20:59.041 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-20 02:20:59.053 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40dee07b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@21e39b82)
+2026-17-20 02:20:59.053 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5f9a8ddc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1280bae3)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@256a5df0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1868ed54)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@131777e8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@45790cb)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@73a5d86c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2cf88901)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4780341) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c910acd)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@612ac38b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@9f2fe2e)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4dd4965a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@79273a4f)
+2026-17-20 02:20:59.054 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4e26987b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@50bb1c1f)
+2026-17-21 02:21:00.109 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-21 02:21:00.254 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-21 02:21:01.300 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-21 02:21:01.669 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-21 02:21:01.916 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-21 02:21:02.149 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-21 02:21:02.477 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-21 02:21:02.658 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-21 02:21:02.771 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-21 02:21:03.138 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-21 02:21:03.164 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-21 02:21:03.177 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 12.399 seconds (process running for 13.82)
+2026-17-21 02:21:23.410 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-21 02:21:23.411 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-21 02:21:23.412 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-21 02:21:23.413 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-21 02:21:23.413 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-21 02:21:23.416 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@41628b4f
+2026-17-21 02:21:23.418 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2330c5c5
+2026-17-21 02:21:23.420 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-21 02:21:23.421 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-17-21 02:21:23.475 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-21 02:21:23.500 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-21 02:21:23.501 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-21 02:21:23.511 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-21 02:21:23.517 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-21 02:21:23.526 DEBUG [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-21 02:21:23.554 DEBUG [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-21 02:21:23.572 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-21 02:21:23.749 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-21 02:21:23.778 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-21 02:21:23.834 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-21 02:21:23.837 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-21 02:21:23.892 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-21 02:21:23.893 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-21 02:21:23.893 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-21 02:21:35.920 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-21 02:21:35.924 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-21 02:21:35.925 DEBUG [http-nio-8080-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-21 02:21:35.926 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-21 02:21:35.927 DEBUG [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-21 02:21:35.929 DEBUG [http-nio-8080-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-21 02:21:35.933 DEBUG [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-21 02:21:35.937 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-21 02:21:35.939 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-21 02:21:35.940 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-21 02:21:35.944 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-21 02:21:35.946 DEBUG [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-21 02:21:35.978 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-21 02:21:35.980 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-21 02:21:35.980 DEBUG [http-nio-8080-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-24 02:24:22.842 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-24 02:24:22.877 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-24 02:24:22.889 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-24 02:24:22.897 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-24 02:24:22.905 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-24 02:24:29.261 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-24 02:24:29.343 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 19936 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-24 02:24:29.344 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-24 02:24:30.838 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-24 02:24:30.975 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 115 ms. Found 2 JPA repository interfaces.
+2026-17-24 02:24:32.221 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-24 02:24:32.241 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-24 02:24:32.246 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-24 02:24:32.246 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-24 02:24:32.336 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-24 02:24:32.336 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2937 ms
+2026-17-24 02:24:32.672 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-24 02:24:32.741 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-24 02:24:32.780 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-24 02:24:33.168 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-24 02:24:33.241 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-24 02:24:33.278 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-24 02:24:33.927 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-24 02:24:33.929 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-24 02:24:33.955 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-24 02:24:33.966 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6edd4fe2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@53918b5e)
+2026-17-24 02:24:33.966 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5366575d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b6cad77)
+2026-17-24 02:24:33.966 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1fca53a7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40dee07b)
+2026-17-24 02:24:33.967 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@21e39b82) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5f9a8ddc)
+2026-17-24 02:24:33.967 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1280bae3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@256a5df0)
+2026-17-24 02:24:33.967 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1868ed54) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@131777e8)
+2026-17-24 02:24:33.967 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@45790cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@73a5d86c)
+2026-17-24 02:24:33.967 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2cf88901) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4780341)
+2026-17-24 02:24:33.967 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3c910acd) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@612ac38b)
+2026-17-24 02:24:35.073 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-24 02:24:35.197 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-24 02:24:36.241 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-24 02:24:36.585 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-24 02:24:36.788 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-24 02:24:37.016 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-24 02:24:37.328 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-24 02:24:37.546 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-24 02:24:37.645 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-24 02:24:38.041 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-24 02:24:38.073 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-24 02:24:38.088 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 9.332 seconds (process running for 10.167)
+2026-17-26 02:26:22.291 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-26 02:26:22.312 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-26 02:26:22.318 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-26 02:26:22.320 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-26 02:26:22.327 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-26 02:26:24.921 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-26 02:26:24.999 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 12076 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-26 02:26:25.000 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "dev"
+2026-17-26 02:26:26.307 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-26 02:26:26.420 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2026-17-26 02:26:27.777 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-26 02:26:27.796 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-26 02:26:27.800 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-26 02:26:27.801 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-26 02:26:27.922 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-26 02:26:27.922 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2864 ms
+2026-17-26 02:26:28.206 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-26 02:26:28.273 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-26 02:26:28.320 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-26 02:26:28.700 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-26 02:26:28.752 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Starting...
+2026-17-26 02:26:28.790 INFO  [main] com.zaxxer.hikari.HikariDataSource - neon-hikari - Start completed.
+2026-17-26 02:26:29.358 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-26 02:26:29.359 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-17-26 02:26:29.379 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (neon-hikari)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-26 02:26:29.390 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3dea1ecc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@105c6c9e)
+2026-17-26 02:26:29.390 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40a7974) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@8d5da7e)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@65a4b9d6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@16ef1160)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@41f90b10) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@67593f7b)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2773504f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@497921d0)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40d10264) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6edd4fe2)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@53918b5e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5366575d)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b6cad77) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1fca53a7)
+2026-17-26 02:26:29.391 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40dee07b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@21e39b82)
+2026-17-26 02:26:30.381 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-26 02:26:30.517 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-26 02:26:31.393 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-26 02:26:31.662 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-26 02:26:31.856 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-17-26 02:26:32.094 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-17-26 02:26:32.371 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-17-26 02:26:32.567 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-17-26 02:26:32.654 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-17-26 02:26:33.057 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-26 02:26:33.092 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-26 02:26:33.111 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 8.724 seconds (process running for 9.531)
+2026-17-26 02:26:43.463 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-26 02:26:43.464 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-26 02:26:43.465 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-17-26 02:26:43.465 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-17-26 02:26:43.465 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-17-26 02:26:43.468 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@475454ae
+2026-17-26 02:26:43.469 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@498d7c57
+2026-17-26 02:26:43.470 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-17-26 02:26:43.470 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2026-17-26 02:26:43.534 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-17-26 02:26:43.561 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-26 02:26:43.562 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-26 02:26:43.571 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-17-26 02:26:43.579 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/h2-console", parameters={}
+2026-17-26 02:26:43.587 DEBUG [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-17-26 02:26:43.623 DEBUG [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2026-17-26 02:26:43.643 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.koyta.auth.exceptions.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2026-17-26 02:26:43.870 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2026-17-26 02:26:43.908 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ApiError[status=500, error=Internal Server Error, message=Something went wrong, path=/h2-console, ti (truncated)...]
+2026-17-26 02:26:43.964 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console.]
+2026-17-26 02:26:43.965 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-17-26 02:26:44.037 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2026-17-26 02:26:44.038 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-17-26 02:26:44.038 DEBUG [http-nio-8080-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 85AC664D6BFDB4F4CF764CDD2B1BAD97
+2026-17-28 02:28:23.480 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-17-28 02:28:23.506 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-17-28 02:28:23.513 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-17-28 02:28:23.516 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown initiated...
+2026-17-28 02:28:23.524 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - neon-hikari - Shutdown completed.
+2026-17-28 02:28:26.375 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-17-28 02:28:26.444 INFO  [main] c.k.a.AuthenticationServiceApplication - Starting AuthenticationServiceApplication using Java 21.0.8 with PID 21548 (A:\Spring-Projects\Auth-App\authentication-service\authentication-service\target\classes started by abhis in A:\Spring-Projects\Auth-App\authentication-service\authentication-service)
+2026-17-28 02:28:26.445 INFO  [main] c.k.a.AuthenticationServiceApplication - The following 1 profile is active: "test"
+2026-17-28 02:28:27.740 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-17-28 02:28:27.839 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2026-17-28 02:28:29.138 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-17-28 02:28:29.158 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-17-28 02:28:29.162 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-17-28 02:28:29.163 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-17-28 02:28:29.258 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-17-28 02:28:29.259 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2756 ms
+2026-17-28 02:28:29.570 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-17-28 02:28:29.620 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-17-28 02:28:29.658 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-17-28 02:28:30.014 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-17-28 02:28:30.060 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-17-28 02:28:30.359 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-17-28 02:28:30.361 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-17-28 02:28:30.394 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-17-28 02:28:30.435 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-17-28 02:28:31.476 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-17-28 02:28:31.553 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-17-28 02:28:32.462 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-17-28 02:28:32.743 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-17-28 02:28:34.043 INFO  [main] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-17-28 02:28:34.220 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-17-28 02:28:34.255 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-17-28 02:28:34.276 INFO  [main] c.k.a.AuthenticationServiceApplication - Started AuthenticationServiceApplication in 8.408 seconds (process running for 9.215)
+2026-17-28 02:28:45.509 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-17-28 02:28:45.510 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-17-28 02:28:45.513 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
