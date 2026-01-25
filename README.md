@@ -1,3 +1,13 @@
+## Branch Strategy
+
+- `master`  
+  Synchronous authentication service (Spring MVC + JPA)
+
+- `reactive`  
+  Reactive authentication service (Spring WebFlux + Reactive Repositories)
+
+Choose the branch based on your project architecture.
+
 
 # 🔐 Authentication & Authorization API – Spring Boot
 
