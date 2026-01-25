@@ -8,6 +8,7 @@
 
 Choose the branch based on your project architecture.
 
+---
 
 # 🔐 Authentication & Authorization API – Spring Boot
 
