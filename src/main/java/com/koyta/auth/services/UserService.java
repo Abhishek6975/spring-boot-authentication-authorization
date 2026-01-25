@@ -1,20 +1,24 @@
 package com.koyta.auth.services;
 
 import com.koyta.auth.dtos.UserDto;
-
-import java.util.List;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 public interface UserService {
 
-    UserDto createUser(UserDto userDto);
+    Mono<UserDto> createUser(UserDto userDto);
 
-    UserDto getUserByEmail(String email);
+    Mono<UserDto> getUserByEmail(String email);
 
-    UserDto updateUser(UserDto userDto , String userId);
+    Mono<UserDto> updateUser(UserDto userDto , String userId);
 
-    void deleteUser(String userId);
+    Mono<Void> deleteUser(String userId);
 
-    UserDto getUserById(String userId);
+    Mono<UserDto> getUserById(String userId);
 
-    List<UserDto> getAllUsers();
+    Flux<UserDto> getAllUsers();
+
+
+
 }
+

@@ -11,10 +11,13 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table("roles")
-public class Role {
+@Table("user_roles")
+public class UserRole {
 
     @Id
-    private UUID id;
-    private String name;
+    private Long id;
+
+    private UUID userId;
+    private UUID roleId;
 }
+

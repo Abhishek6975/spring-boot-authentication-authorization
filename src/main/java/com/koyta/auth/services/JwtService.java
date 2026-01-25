@@ -3,9 +3,11 @@ package com.koyta.auth.services;
 import com.koyta.auth.entities.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.List;
+
 public interface JwtService {
 
-    String generateAccessToken(User user);
+    String generateAccessToken(User user, List<String> roles);
 
     String generateRefreshToken(User user, String jti);
 

@@ -1,15 +1,15 @@
 package com.koyta.auth.repositories;
 
 import com.koyta.auth.entities.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import reactor.core.publisher.Mono;
 
-import java.util.Optional;
 import java.util.UUID;
 
-@Repository
-public interface UserRepository extends JpaRepository<User, UUID> {
+public interface UserRepository extends ReactiveCrudRepository<User, UUID> {
 
-    Optional<User> findByEmail(String email);
-    boolean existsByEmail(String email);
+    Mono<User> findByEmail(String email);
+
+    Mono<User> findById(UUID uid);
+
 }

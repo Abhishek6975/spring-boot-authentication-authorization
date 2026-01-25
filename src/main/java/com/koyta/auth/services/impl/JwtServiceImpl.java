@@ -1,8 +1,9 @@
 package com.koyta.auth.services.impl;
 
-import com.koyta.auth.entities.Role;
 import com.koyta.auth.entities.User;
 import com.koyta.auth.exceptions.JwtTokenExpiredException;
+import com.koyta.auth.repositories.RoleRepository;
+import com.koyta.auth.repositories.UserRepository;
 import com.koyta.auth.services.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -22,7 +23,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -36,11 +36,17 @@ public class JwtServiceImpl implements JwtService {
     private final long refreshTtlSeconds;
     private final String issuer;
 
+    private final UserRepository userRepository;
+
+    private final RoleRepository roleRepository;
+
     public JwtServiceImpl(
             @Value("${security.jwt.secret}") String secret,
             @Value("${security.jwt.access-ttl-seconds:3600}") long accessTtlSeconds,         // 60 minutes
             @Value("${security.jwt.refresh-ttl-seconds:1209600}") long refreshTtlSeconds,   // 14 days
-            @Value("${security.jwt.issuer:auth-backend}") String issuer) {
+            @Value("${security.jwt.issuer:auth-backend}") String issuer,
+            UserRepository userRepository,
+            RoleRepository roleRepository) {
 
         if (secret == null || secret.length() < 64) {
             throw new IllegalStateException("JWT secret must be at least 64 characters. Provide via env JWT_SECRET.");
@@ -49,12 +55,12 @@ public class JwtServiceImpl implements JwtService {
         this.accessTtlSeconds = accessTtlSeconds;
         this.refreshTtlSeconds = refreshTtlSeconds;
         this.issuer = issuer;
+        this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
     }
 
-    public String generateAccessToken(User user) {
+    public String generateAccessToken(User user, List<String> roles) {
         Instant now = Instant.now();
-        List<String> roles = user.getRoles() == null ? List.of() :
-                user.getRoles().stream().map(Role::getName).collect(Collectors.toList());
         return Jwts.builder()
                 .id(UUID.randomUUID().toString())
                 .subject(user.getEmail())
@@ -70,6 +76,8 @@ public class JwtServiceImpl implements JwtService {
                 .signWith(key)
                 .compact();
     }
+
+
 
     public String generateRefreshToken(User user, String jti) {
         Instant now = Instant.now();

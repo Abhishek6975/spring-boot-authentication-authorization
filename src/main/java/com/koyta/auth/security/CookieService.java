@@ -2,17 +2,17 @@ package com.koyta.auth.security;
 
 import com.koyta.auth.dtos.RefreshTokenRequest;
 import com.koyta.auth.services.JwtService;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.annotation.Nullable;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpCookie;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Service;
-
-import java.util.Arrays;
-import java.util.Optional;
+import reactor.core.publisher.Mono;
 
 @Getter
 @Setter
@@ -47,87 +47,90 @@ public class CookieService {
 
     // create method to attached cookie to response
 
-    public void attachRefreshCookie(HttpServletResponse response, String value, int maxAge){
+    public void attachRefreshCookie(ServerHttpResponse response, String value, int maxAge) {
 
-        ResponseCookie.ResponseCookieBuilder responseCookieBuilder =
+        ResponseCookie.ResponseCookieBuilder builder =
                 ResponseCookie.from(refreshTokenCookieName, value)
-                .httpOnly(cookieHttpOnly)
-                .secure(cookieSecure)
-                .path("/")
-                .maxAge(maxAge)
-                .sameSite(cookieSameSite);
+                        .httpOnly(cookieHttpOnly)
+                        .secure(cookieSecure)
+                        .path("/")
+                        .maxAge(maxAge)
+                        .sameSite(cookieSameSite);
 
-        if(cookieDomain != null && !cookieDomain.isBlank()){
-            responseCookieBuilder.domain(cookieDomain);
+        if (cookieDomain != null && !cookieDomain.isBlank()) {
+            builder.domain(cookieDomain);
         }
 
-        ResponseCookie responseCookie = responseCookieBuilder.build();
-        response.addHeader(HttpHeaders.SET_COOKIE, responseCookie.toString());
+        ResponseCookie build = builder.build();
+        response.addCookie(builder.build());
     }
+
 
     // Clear refresh Cookie
-    public void clearRefreshCookie(HttpServletResponse response){
+    public void clearRefreshCookie(ServerHttpResponse response) {
 
-        ResponseCookie.ResponseCookieBuilder responseCookieBuilder =
+        ResponseCookie.ResponseCookieBuilder builder =
                 ResponseCookie.from(refreshTokenCookieName, "")
-                .maxAge(0)
-                .httpOnly(cookieHttpOnly)
-                .path("/")
-                .sameSite(cookieSameSite)
-                .secure(cookieSecure);
+                        .maxAge(0)
+                        .httpOnly(cookieHttpOnly)
+                        .secure(cookieSecure)
+                        .path("/")
+                        .sameSite(cookieSameSite);
 
-        if(cookieDomain != null && !cookieDomain.isBlank()) {
-            responseCookieBuilder.domain(cookieDomain);
+        if (cookieDomain != null && !cookieDomain.isBlank()) {
+            builder.domain(cookieDomain);
         }
 
-        ResponseCookie responseCookie = responseCookieBuilder.build();
-        response.addHeader(HttpHeaders.SET_COOKIE, responseCookie.toString());
-
+        response.addCookie(builder.build());
     }
 
-    public void addNoStoreHeader(HttpServletResponse response) {
-        response.setHeader(HttpHeaders.CACHE_CONTROL, "no-store");
-        response.setHeader("Pragma" , "no-cache");
+    public void addNoStoreHeader(ServerHttpResponse response) {
+        response.getHeaders().setCacheControl("no-store");
+        response.getHeaders().add("Pragma", "no-cache");
     }
 
-    public Optional<String> readRefreshTokenFromRequest(RefreshTokenRequest body, HttpServletRequest request) {
-        // prefer reading refresh token from cookie
+    /* ==============================
+       READ TOKEN (REACTIVE)
+       ============================== */
 
-        if(request.getCookies() != null){
-            Optional<String> fromCookie = Arrays.stream(request.getCookies())
-                    .filter(cookie -> refreshTokenCookieName.equals(cookie.getName()))
-                    .map(c -> c.getValue())
-                    .filter(v -> !v.isBlank())
-                    .findFirst();
+    public Mono<String> readRefreshTokenFromRequest( @Nullable RefreshTokenRequest body, ServerHttpRequest request) {
 
-            if(fromCookie.isPresent()) {
-                return fromCookie;
-            }
-        }
+        // 1️⃣ Cookie (highest priority)
+        Mono<String> fromCookie =
+                Mono.justOrEmpty(request.getCookies().getFirst(refreshTokenCookieName))
+                        .map(HttpCookie::getValue)
+                        .filter(v -> !v.isBlank());
 
-        if(body != null && body.refreshToken() != null && !body.refreshToken().isBlank()){
-            return Optional.of(body.refreshToken());
-        }
+        // 2️⃣ Request body
+        Mono<String> fromBody =
+                Mono.justOrEmpty(body)
+                        .map(RefreshTokenRequest::refreshToken)
+                        .filter(v -> v != null && !v.isBlank());
 
-        String header = request.getHeader("X-Refresh-Token");
+        // 3️⃣ Custom header
+        Mono<String> fromHeader =
+                Mono.justOrEmpty(request.getHeaders().getFirst("X-Refresh-Token"))
+                        .map(String::trim)
+                        .filter(v -> !v.isBlank());
 
-        if(header != null && !header.isBlank()) {
-            return Optional.of(header.trim());
-        }
+        // 4️⃣ Authorization header (Bearer)
+        Mono<String> fromAuthorization =
+                Mono.justOrEmpty(request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION))
+                        .filter(h -> h.regionMatches(true, 0, "Bearer ", 0, 7))
+                        .map(h -> h.substring(7).trim())
+                        .filter(v -> !v.isBlank())
+                        .filter(token -> {
+                            try {
+                                return jwtService.isRefreshToken(token);
+                            } catch (Exception e) {
+                                return false;
+                            }
+                        });
 
-        //Authorization = Bearer <token>
-        String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
-        if (authHeader != null && authHeader.regionMatches(true, 0, "Bearer ", 0, 7)) {
-            String candidate = authHeader.substring(7).trim();
-            if (!candidate.isEmpty()) {
-                try {
-                    if (jwtService.isRefreshToken(candidate)) {
-                        return Optional.of(candidate);
-                    }
-                } catch (Exception ignored) {
-                }
-            }
-        }
-        return Optional.empty();
+        // 🔥 Priority order
+        return fromCookie
+                .switchIfEmpty(fromBody)
+                .switchIfEmpty(fromHeader)
+                .switchIfEmpty(fromAuthorization);
     }
 }

@@ -5,29 +5,31 @@ import com.koyta.auth.dtos.RefreshTokenRequest;
 import com.koyta.auth.dtos.TokenResponse;
 import com.koyta.auth.dtos.UserDto;
 import com.koyta.auth.entities.RefreshToken;
-import com.koyta.auth.entities.User;
+import com.koyta.auth.entities.Role;
 import com.koyta.auth.exceptions.AuthenticationFailedException;
 import com.koyta.auth.repositories.RefreshTokenRepository;
+import com.koyta.auth.repositories.RoleRepository;
+import com.koyta.auth.repositories.UserRepository;
+import com.koyta.auth.repositories.UserRoleRepository;
 import com.koyta.auth.security.CookieService;
-import com.koyta.auth.security.CustomUserDetails;
 import com.koyta.auth.services.AuthService;
 import com.koyta.auth.services.JwtService;
 import com.koyta.auth.services.UserService;
 import io.jsonwebtoken.JwtException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.http.ResponseCookie;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 
+import java.time.Duration;
 import java.time.Instant;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -35,7 +37,7 @@ public class AuthServiceImpl implements AuthService {
 
     private final UserService userService;
 
-    private final AuthenticationManager authenticationManager;
+    private final ReactiveAuthenticationManager reactiveAuthenticationManager;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -51,15 +53,25 @@ public class AuthServiceImpl implements AuthService {
 
     private final CookieService cookieService;
 
+    private final UserRepository userRepository;
+
+    private final UserRoleRepository userRoleRepository;
+
+    private final RoleRepository roleRepository;
+
     public AuthServiceImpl(UserService userService,
-                           AuthenticationManager authenticationManager,
+                           ReactiveAuthenticationManager reactiveAuthenticationManager,
                            PasswordEncoder passwordEncoder,
                            JwtService jwtService,
                            @Value("${security.jwt.access-ttl-seconds:3600}") long accessTtlSeconds,
                            @Value("${security.jwt.refresh-ttl-seconds:1209600}") long refreshTtlSeconds,
-                           ModelMapper modelMapper, RefreshTokenRepository refreshTokenRepository, CookieService cookieService) {
+                           ModelMapper modelMapper, RefreshTokenRepository refreshTokenRepository,
+                           CookieService cookieService,
+                           UserRepository userRepository,
+                           UserRoleRepository userRoleRepository,
+                           RoleRepository roleRepository) {
         this.userService = userService;
-        this.authenticationManager = authenticationManager;
+        this.reactiveAuthenticationManager = reactiveAuthenticationManager;
         this.passwordEncoder = passwordEncoder;
         this.jwtService = jwtService;
         this.accessTtlSeconds = accessTtlSeconds;
@@ -67,140 +79,238 @@ public class AuthServiceImpl implements AuthService {
         this.modelMapper = modelMapper;
         this.refreshTokenRepository = refreshTokenRepository;
         this.cookieService = cookieService;
+        this.userRepository = userRepository;
+        this.userRoleRepository = userRoleRepository;
+        this.roleRepository = roleRepository;
     }
 
+
     @Override
-    public TokenResponse login(LoginRequest loginRequest, HttpServletResponse response) {
+    public Mono<TokenResponse> login(LoginRequest loginRequest, ServerHttpResponse response) {
 
-        try {
-            Authentication authenticate = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(loginRequest.email(), loginRequest.password()));
+        return userRepository.findByEmail(loginRequest.email())
+                .switchIfEmpty(Mono.error(
+                        new AuthenticationFailedException("Invalid email or password")
+                ))
+                .flatMap(user -> {
 
-            if (!authenticate.isAuthenticated()) {
-                throw new AuthenticationFailedException("Invalid email or password");
-            }
+                    if (!passwordEncoder.matches(loginRequest.password(), user.getPassword())) {
+                        return Mono.error(
+                                new AuthenticationFailedException("Invalid email or password")
+                        );
+                    }
 
-            CustomUserDetails customUserDetails = (CustomUserDetails) authenticate.getPrincipal();
+                    if (!user.isEnable()) {
+                        return Mono.error(
+                                new AuthenticationFailedException("Account is disabled. Please verify your email.")
+                        );
+                    }
 
-            if(!customUserDetails.isEnabled()) {
-                throw new DisabledException("Account is disabled. Please verify your email.");
-            }
+                    // generate refresh token entity
+                    String jti = UUID.randomUUID().toString();
 
+                    RefreshToken refreshTokenEntity = RefreshToken.builder()
+                            .id(UUID.randomUUID())
+                            .jti(jti)
+                            .userId(user.getId())
+                            .createdAt(Instant.now())
+                            .expiresAt(Instant.now().plusSeconds(refreshTtlSeconds))
+                            .revoked(false)
+                            .build();
 
-            String jti = UUID.randomUUID().toString();
-            RefreshToken refreshTokenOb = RefreshToken.builder()
-                    .jti(jti)
-                    .user(customUserDetails.getUser())
-                    .createdAt(Instant.now())
-                    .expiresAt(Instant.now().plusSeconds(refreshTtlSeconds))
-                    .revoked(false)
-                    .build();
+                    return refreshTokenRepository.save(refreshTokenEntity)
+                            .flatMap(savedToken -> getUserRoles(user.getId())
+                                    .map(roles -> {
+                                        String accessToken =
+                                                jwtService.generateAccessToken(user, roles);
+                                        String refreshToken =
+                                                jwtService.generateRefreshToken(user, savedToken.getJti());
 
-            // refresh token save
-            refreshTokenRepository.save(refreshTokenOb);
+                                // 🍪 attach cookie (REACTIVE WAY)
+                                        attachRefreshCookie(response, refreshToken);
 
-            // access token generated
-            String accessToken = jwtService.generateAccessToken(customUserDetails.getUser());
-            String refreshToken = jwtService.generateRefreshToken(customUserDetails.getUser(), refreshTokenOb.getJti());
+                                addNoStoreHeader(response);
 
-            // use cookie service to attach refresh token in cookie
-            cookieService.attachRefreshCookie(response, refreshToken, (int) refreshTtlSeconds);
-            cookieService.addNoStoreHeader(response);
-
-            return TokenResponse.of(accessToken,refreshToken, accessTtlSeconds, modelMapper.map(customUserDetails.getUser(), UserDto.class));
-
-
-        } catch (BadCredentialsException ex) {
-            throw new AuthenticationFailedException("Invalid email or password");
-        } catch (DisabledException ex) {
-            throw new AuthenticationFailedException("Account is disabled. Please verify your email.");
-        }
-
+                                return TokenResponse.of(
+                                        accessToken,
+                                        refreshToken,
+                                        accessTtlSeconds,
+                                        modelMapper.map(user, UserDto.class)
+                                );
+                            }));
+                });
     }
 
-    @Override
-    public UserDto registerUser(UserDto userDto) {
-
-        userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        return userService.createUser(userDto);
+    public Mono<List<String>> getUserRoles(UUID userId) {
+        return userRoleRepository.findByUserId(userId)
+                .flatMap(userRole ->
+                        roleRepository.findById(userRole.getRoleId()))
+                .map(Role::getName)
+                .collectList();
     }
 
-    @Override
-    public TokenResponse readRefreshTokenRequest(RefreshTokenRequest body, HttpServletRequest request, HttpServletResponse response) {
+    private void attachRefreshCookie(ServerHttpResponse response, String refreshToken) {
 
-        String refreshToken = cookieService.readRefreshTokenFromRequest(body, request).orElseThrow(() -> new BadCredentialsException("Invalid Refresh Token"));
-
-        if(!jwtService.isRefreshToken(refreshToken)){
-            throw new BadCredentialsException("Invalid Refresh Token Type");
-        }
-
-        String jti = jwtService.getJti(refreshToken);
-        String userId = jwtService.getUserId(refreshToken);
-        RefreshToken storedRefreshToken = refreshTokenRepository.findByJti(jti)
-                .orElseThrow(() -> new BadCredentialsException("Refresh token not recognized"));
-
-        if(storedRefreshToken.isRevoked()){
-            throw new BadCredentialsException("Refresh token expired or revoked");
-        }
-
-        if(storedRefreshToken.getExpiresAt().isBefore(Instant.now())){
-            throw new BadCredentialsException("Refresh token expired");
-        }
-
-        if(!storedRefreshToken.getUser().getEmail().equals(userId)){
-            throw new BadCredentialsException("Refresh token does not belong to this user");
-        }
-
-        //refresh token ko rotate:
-        storedRefreshToken.setRevoked(true);
-        String newJti= UUID.randomUUID().toString();
-        storedRefreshToken.setReplacedByToken(newJti);
-
-        refreshTokenRepository.save(storedRefreshToken);
-
-        User user = storedRefreshToken.getUser();
-
-        var newRefreshTokenOb = RefreshToken.builder()
-                .jti(newJti)
-                .user(user)
-                .createdAt(Instant.now())
-                .expiresAt(Instant.now().plusSeconds(refreshTtlSeconds))
-                .revoked(false)
+        ResponseCookie cookie = ResponseCookie.from("refresh_token", refreshToken)
+                .httpOnly(true)
+                .secure(false) // true in prod
+                .path("/")
+                .maxAge(Duration.ofSeconds(refreshTtlSeconds))
+                .sameSite("Lax")
                 .build();
 
-        refreshTokenRepository.save(newRefreshTokenOb);
-        String newAccessToken= jwtService.generateAccessToken(user);
-        String newRefreshToken = jwtService.generateRefreshToken(user, newRefreshTokenOb.getJti());
+        response.addCookie(cookie);
+    }
 
-        cookieService.attachRefreshCookie(response, newRefreshToken, (int) refreshTtlSeconds);
-        cookieService.addNoStoreHeader(response);
-
-       return TokenResponse.of(newAccessToken, newRefreshToken, accessTtlSeconds, modelMapper.map(user, UserDto.class));
-
+    private void addNoStoreHeader(ServerHttpResponse response) {
+        response.getHeaders().add("Cache-Control", "no-store");
     }
 
     @Override
-    public void logout(HttpServletRequest request, HttpServletResponse response) {
-       cookieService.readRefreshTokenFromRequest(null, request).ifPresent(token -> {
-            try {
-                if (jwtService.isRefreshToken(token)) {
-                    String jti = jwtService.getJti(token);
-                    refreshTokenRepository.findByJti(jti).ifPresent(rt -> {
-                        rt.setRevoked(true);
-                        refreshTokenRepository.save(rt);
-                    });
-                }
-            } catch (JwtException ignored) {
+    public Mono<UserDto> registerUser(UserDto userDto) {
 
-            }
-        });
-
-        // Use CookieUtil (same behavior)
-        cookieService.clearRefreshCookie(response);
-        cookieService.addNoStoreHeader(response);
-        SecurityContextHolder.clearContext();
-        
+        return Mono.fromCallable(() -> passwordEncoder.encode(userDto.getPassword()))
+                .map(encodedPassword -> {
+                    userDto.setPassword(encodedPassword);
+                    return userDto;
+        }).flatMap(userService::createUser);
     }
+
+    @Override
+    public Mono<TokenResponse> readRefreshTokenRequest(RefreshTokenRequest body, ServerHttpRequest request, ServerHttpResponse response) {
+
+        return cookieService.readRefreshTokenFromRequest(body, request)
+                .switchIfEmpty(Mono.error(new BadCredentialsException("Invalid Refresh Token")))
+                .flatMap(refreshToken -> {
+
+                    // 1️. Validate token type
+                    if (!jwtService.isRefreshToken(refreshToken)) {
+                        return Mono.error(new BadCredentialsException("Invalid Refresh Token Type"));
+                    }
+                    String jti;
+                    String userId;
+
+                    try {
+                        jti = jwtService.getJti(refreshToken);
+                        userId = jwtService.getUserId(refreshToken);
+                    } catch (Exception e) {
+                        return Mono.error(new BadCredentialsException("Invalid Refresh Token"));
+                    }
+
+                    // 2️. Fetch stored refresh token
+                    return refreshTokenRepository.findByJti(jti)
+                            .switchIfEmpty(Mono.error(
+                                    new BadCredentialsException("Refresh token not recognized")
+                            ))
+                            .flatMap(stored -> {
+
+                                // 3. Validate stored token
+                                if (stored.isRevoked()) {
+                                    return Mono.error(
+                                            new BadCredentialsException("Refresh token expired or revoked")
+                                    );
+                                }
+
+                                if (stored.getExpiresAt().isBefore(Instant.now())) {
+                                    return Mono.error(
+                                            new BadCredentialsException("Refresh token expired")
+                                    );
+                                }
+
+                                if (!stored.getUserId().toString().equals(userId)) {
+                                    return Mono.error(
+                                            new BadCredentialsException("Refresh token does not belong to this user")
+                                    );
+                                }
+
+                                // 4️. Rotate refresh token
+                                String newJti = UUID.randomUUID().toString();
+                                stored.setRevoked(true);
+                                stored.setReplacedByToken(newJti);
+
+                                return refreshTokenRepository.save(stored)
+                                        .then(userRepository.findById(stored.getUserId())
+                                                .switchIfEmpty(Mono.error(new BadCredentialsException("User not found")))
+                                                        .flatMap(user -> {
+
+                                                            RefreshToken newRefreshTokenEntity =
+                                                                    RefreshToken.builder()
+                                                                            .id(UUID.randomUUID())
+                                                                            .jti(newJti)
+                                                                            .userId(user.getId())
+                                                                            .createdAt(Instant.now())
+                                                                            .expiresAt(Instant.now().plusSeconds(refreshTtlSeconds))
+                                                                            .revoked(false)
+                                                                            .build();
+
+                                                            return refreshTokenRepository.save(newRefreshTokenEntity)
+                                                                    .flatMap(savedToken -> getUserRoles(user.getId())
+
+                                                                    .map(roles -> {
+
+                                                                        String newAccessToken =
+                                                                                jwtService.generateAccessToken(user, roles);
+
+                                                                        String newRefreshToken =
+                                                                                jwtService.generateRefreshToken(user, savedToken.getJti());
+
+                                                                        // 🍪 Attach cookie (reactive-safe side effect)
+                                                                        cookieService.attachRefreshCookie(
+                                                                                response,
+                                                                                newRefreshToken,
+                                                                                (int) refreshTtlSeconds
+                                                                        );
+                                                                        cookieService.addNoStoreHeader(response);
+
+                                                                        return TokenResponse.of(
+                                                                                newAccessToken,
+                                                                                newRefreshToken,
+                                                                                accessTtlSeconds,
+                                                                                modelMapper.map(user, UserDto.class)
+                                                                        );
+                                                                    }));
+                                                        })
+                                        );
+                            });
+                });
+    }
+
+
+
+
+
+    @Override
+    public Mono<Void> logout(ServerHttpRequest request, ServerHttpResponse response) {
+
+        return cookieService.readRefreshTokenFromRequest(null, request)
+                .flatMap(token -> {
+
+                    if (!jwtService.isRefreshToken(token)) {
+                        return Mono.empty();
+                    }
+
+                    String jti;
+                    try {
+                        jti = jwtService.getJti(token);
+                    } catch (JwtException ex) {
+                        return Mono.empty();
+                    }
+
+                  return refreshTokenRepository.findByJti(jti)
+                            .flatMap(rt -> {
+                                rt.setRevoked(true);
+                                return refreshTokenRepository.save(rt);
+                            })
+                            .switchIfEmpty(Mono.empty());
+                })
+                .doFinally(signalType -> {
+                    // Always clear cookie & headers
+                    cookieService.clearRefreshCookie(response);
+                    cookieService.addNoStoreHeader(response);
+                })
+                .then();
+    }
+
 
 
 }
