@@ -1,9 +1,7 @@
 package com.koyta.auth.services.impl;
 
-import com.koyta.auth.dtos.LoginRequest;
-import com.koyta.auth.dtos.RefreshTokenRequest;
-import com.koyta.auth.dtos.TokenResponse;
-import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.dtos.*;
+import com.koyta.auth.entities.Provider;
 import com.koyta.auth.entities.RefreshToken;
 import com.koyta.auth.entities.User;
 import com.koyta.auth.exceptions.AuthenticationFailedException;
@@ -107,7 +105,8 @@ public class AuthServiceImpl implements AuthService {
             cookieService.attachRefreshCookie(response, refreshToken, (int) refreshTtlSeconds);
             cookieService.addNoStoreHeader(response);
 
-            return TokenResponse.of(accessToken,refreshToken, accessTtlSeconds, modelMapper.map(customUserDetails.getUser(), UserDto.class));
+            return TokenResponse.of(accessToken, accessTtlSeconds, modelMapper.map(customUserDetails.getUser(), UserDto.class)
+            );
 
 
         } catch (BadCredentialsException ex) {
@@ -119,10 +118,17 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public UserDto registerUser(UserDto userDto) {
+    public UserDto registerUser(RegisterUserRequest request) {
 
-        userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        return userService.createUser(userDto);
+        User user = new User();
+        user.setName(request.getName());
+        user.setEmail(request.getEmail());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setImage(request.getImage());
+        user.setProvider(Provider.LOCAL);
+
+       // User savedUser = userService.createUser(user);
+        return  userService.createUser(user);
     }
 
     @Override
@@ -175,7 +181,7 @@ public class AuthServiceImpl implements AuthService {
         cookieService.attachRefreshCookie(response, newRefreshToken, (int) refreshTtlSeconds);
         cookieService.addNoStoreHeader(response);
 
-       return TokenResponse.of(newAccessToken, newRefreshToken, accessTtlSeconds, modelMapper.map(user, UserDto.class));
+        return TokenResponse.of(newAccessToken, accessTtlSeconds, modelMapper.map(user, UserDto.class));
 
     }
 

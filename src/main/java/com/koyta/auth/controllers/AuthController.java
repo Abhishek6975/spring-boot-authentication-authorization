@@ -1,9 +1,6 @@
 package com.koyta.auth.controllers;
 
-import com.koyta.auth.dtos.LoginRequest;
-import com.koyta.auth.dtos.RefreshTokenRequest;
-import com.koyta.auth.dtos.TokenResponse;
-import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.dtos.*;
 import com.koyta.auth.services.AuthService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
@@ -52,8 +49,8 @@ public class AuthController {
 
 
     @PostMapping("/register")
-    public ResponseEntity<UserDto> registerUser(@RequestBody UserDto userDto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(authService.registerUser(userDto));
+    public ResponseEntity<UserDto> registerUser(@RequestBody RegisterUserRequest request) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(authService.registerUser(request));
     }
 
 }

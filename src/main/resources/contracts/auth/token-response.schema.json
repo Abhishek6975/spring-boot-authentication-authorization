@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TokenResponse",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["accessToken", "expiresIn", "tokenType", "user"],
+  "properties": {
+    "accessToken": {
+      "type": "string",
+      "minLength": 20
+    },
+    "expiresIn": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tokenType": {
+      "type": "string",
+      "enum": ["Bearer"]
+    },
+    "user": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "email", "enable", "provider", "roles"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "image": {
+          "type": "string"
+        },
+        "enable": {
+          "type": "boolean"
+        },
+        "provider": {
+          "type": "string",
+          "enum": ["LOCAL", "GOOGLE", "GITHUB"]
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

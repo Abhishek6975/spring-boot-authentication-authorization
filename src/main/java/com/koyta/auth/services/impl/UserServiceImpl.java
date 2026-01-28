@@ -1,7 +1,6 @@
 package com.koyta.auth.services.impl;
 
 import com.koyta.auth.dtos.UserDto;
-import com.koyta.auth.entities.Provider;
 import com.koyta.auth.entities.User;
 import com.koyta.auth.exceptions.ResourceNotFoundException;
 import com.koyta.auth.helpers.UserHelper;
@@ -28,20 +27,19 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public UserDto createUser(UserDto userDto) {
+    public UserDto createUser(User user) {
 
-        if(userDto.getEmail() == null || userDto.getEmail().isBlank()){
+        if(user.getEmail() == null || user.getEmail().isBlank()){
             throw new IllegalArgumentException("Email is required");
         }
 
-        if(userRepository.existsByEmail(userDto.getEmail())){
+        if(userRepository.existsByEmail(user.getEmail())){
             throw new IllegalArgumentException("Email already exists");
         }
 
-        User user = modelMapper.map(userDto, User.class);
-        user.setProvider(userDto.getProvider() != null ? userDto.getProvider() : Provider.LOCAL);
-
         // role assign here to user for authorization
+        // assign roles here (NO save inside)
+        // assignDefaultRoles(user);
 
         User saveUser = userRepository.save(user);
         return modelMapper.map(saveUser, UserDto.class);
