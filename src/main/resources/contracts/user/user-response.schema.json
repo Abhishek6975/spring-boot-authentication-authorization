@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "required": ["id", "name", "email", "enable", "provider"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "image": {
+      "type": "string"
+    },
+    "enable": {
+      "type": "boolean",
+      "default": true
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["LOCAL", "GOOGLE", "GITHUB"]
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/role"
+      }
+    }
+  },
+  "definitions": {
+    "role": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

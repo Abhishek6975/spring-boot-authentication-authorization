@@ -105,6 +105,21 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
 
+    @ExceptionHandler(ContractValidationException.class)
+    public ResponseEntity<ApiError> handleContractValidation(
+            ContractValidationException ex,
+            HttpServletRequest request) {
+
+        ApiError error = ApiError.of(
+                HttpStatus.BAD_REQUEST.value(),
+                "Contract Validation Failed",
+                ex.getMessage(),
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.badRequest().body(error);
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiError> handleGlobalException(Exception ex, HttpServletRequest request) {
         ApiError error = ApiError.of(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Internal Server Error", "Something went wrong",

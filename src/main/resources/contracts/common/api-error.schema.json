@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ApiError",
+  "type": "object",
+  "required": ["status", "error", "message", "path"],
+  "properties": {
+    "status": {
+      "type": "integer",
+      "minimum": 400,
+      "maximum": 599,
+      "description": "HTTP status code"
+    },
+    "error": {
+      "type": "string",
+      "description": "Short error title"
+    },
+    "message": {
+      "type": "string",
+      "description": "Detailed error message"
+    },
+    "path": {
+      "type": "string",
+      "description": "API path where error occurred"
+    },
+    "timestamp": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Error timestamp (can be null)"
+    }
+  },
+  "additionalProperties": false
+}

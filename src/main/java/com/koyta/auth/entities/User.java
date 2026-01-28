@@ -21,6 +21,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
     private UUID id;
+
+    @Version
+    @Column(name = "version")
+    private Long version;
+
     @Column(name = "user_name",length = 500)
     private String name;
     @Column(name = "user_email", unique = true)
@@ -28,7 +33,10 @@ public class User {
     private String password;
     private String image;
     private boolean enable = true;
+
+    @Column(nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
+    @Column(nullable = false)
     private Instant updatedAt = Instant.now();
 
     @Enumerated(EnumType.STRING)

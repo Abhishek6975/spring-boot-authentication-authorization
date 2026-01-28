@@ -1,5 +1,6 @@
 package com.koyta.auth.dtos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.koyta.auth.entities.Provider;
 import jakarta.validation.constraints.Email;
@@ -7,7 +8,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -17,6 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@JsonIgnoreProperties(value = {"createdAt", "updatedAt", "enable", "roles"}, allowGetters = true)
 public class UserDto {
     private UUID id;
 
@@ -37,10 +38,9 @@ public class UserDto {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private boolean enable = true;
-    private Instant createdAt = Instant.now();
-    private Instant updatedAt = Instant.now();
 
     private Provider provider = Provider.LOCAL;
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Set<RoleDto> roles = new HashSet<>();
 }

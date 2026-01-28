@@ -1,11 +1,14 @@
 package com.koyta.auth.controllers;
 
+import com.koyta.auth.dtos.CreateUserRequest;
 import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.entities.User;
 import com.koyta.auth.services.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,10 +19,19 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping()
-    public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto) {
+    private final PasswordEncoder passwordEncoder;
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(userDto));
+    @PostMapping()
+    public ResponseEntity<UserDto> createUser(@RequestBody CreateUserRequest request) {
+
+        User user = new User();
+        user.setName(request.getName());
+        user.setEmail(request.getEmail());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setImage(request.getImage());
+        user.setProvider(request.getProvider());
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(user));
     }
 
     @GetMapping("/email/{email}")
