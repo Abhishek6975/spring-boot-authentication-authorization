@@ -1,9 +1,6 @@
 package com.koyta.auth.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.UUID;
@@ -18,6 +15,7 @@ import java.util.UUID;
 @Table(name = "roles")
 public class Role {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id = UUID.randomUUID();
     @Column(unique = true, nullable = false)
     private String name;
