@@ -1,11 +1,14 @@
 package com.koyta.auth.services.impl;
 
 import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.entities.Role;
 import com.koyta.auth.entities.User;
 import com.koyta.auth.exceptions.ResourceNotFoundException;
 import com.koyta.auth.helpers.UserHelper;
+import com.koyta.auth.repositories.RoleRepository;
 import com.koyta.auth.repositories.UserRepository;
 import com.koyta.auth.services.UserService;
+import com.koyta.auth.util.AppConstants;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -13,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -23,6 +27,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     private final ModelMapper modelMapper;
+
+    private final RoleRepository roleRepository;
 
 
     @Override
@@ -36,6 +42,12 @@ public class UserServiceImpl implements UserService {
         if(userRepository.existsByEmail(user.getEmail())){
             throw new IllegalArgumentException("Email already exists");
         }
+
+        Role userRole = roleRepository.findByName(AppConstants.USER)
+                .orElseGet(() -> roleRepository.save(new Role(null, AppConstants.USER)));
+
+        user.setRoles(Set.of(userRole));
+        user.setEnable(true);
 
         // role assign here to user for authorization
         // assign roles here (NO save inside)

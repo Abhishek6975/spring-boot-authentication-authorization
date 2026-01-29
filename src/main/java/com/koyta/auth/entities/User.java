@@ -32,7 +32,7 @@ public class User {
     private String email;
     private String password;
     private String image;
-    private boolean enable = true;
+    private boolean enable;
 
     @Column(nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
