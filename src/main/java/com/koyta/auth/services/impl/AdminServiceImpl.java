@@ -1,6 +1,7 @@
 package com.koyta.auth.services.impl;
 
-import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.dtos.AdminResponse;
+import com.koyta.auth.dtos.CreateAdminRequest;
 import com.koyta.auth.entities.Role;
 import com.koyta.auth.entities.User;
 import com.koyta.auth.exceptions.ResourceNotFoundException;
@@ -31,9 +32,9 @@ public class AdminServiceImpl implements AdminService {
 
     private final ModelMapper modelMapper;
 
-    public UserDto createAdmin(UserDto userDto) {
+    public AdminResponse createAdmin( CreateAdminRequest request) {
 
-        if (userRepository.existsByEmail(userDto.getEmail())) {
+        if (userRepository.existsByEmail(request.getEmail())) {
             throw new IllegalArgumentException("Email already exists");
         }
 
@@ -41,9 +42,9 @@ public class AdminServiceImpl implements AdminService {
                 .orElseThrow(() -> new IllegalStateException("ADMIN role not found"));
 
         User admin = new User();
-        admin.setName(userDto.getName());
-        admin.setEmail(userDto.getEmail());
-        admin.setPassword(passwordEncoder.encode(userDto.getPassword()));
+        admin.setName(request.getName());
+        admin.setEmail(request.getEmail());
+        admin.setPassword(passwordEncoder.encode(request.getPassword()));
         admin.setEnable(true);
         admin.setRoles(Set.of(adminRole));
 
@@ -70,8 +71,8 @@ public class AdminServiceImpl implements AdminService {
         userRepository.save(user);
     }
 
-    private UserDto mapToDto(User admin) {
-        return modelMapper.map(admin , UserDto.class);
+    private AdminResponse mapToDto(User admin) {
+        return modelMapper.map(admin , AdminResponse.class);
     }
 }
 

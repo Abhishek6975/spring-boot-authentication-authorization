@@ -15,7 +15,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -83,9 +83,14 @@ public class SecurityConfig {
             authorize.anyRequest().authenticated();
         });
 
+        http.formLogin(AbstractHttpConfigurer::disable);
+        http.httpBasic(AbstractHttpConfigurer::disable);
+
         http.oauth2Login(oauth2 ->
                           oauth2.successHandler(authenticationSuccessHandler)
-                        . failureHandler(null)
+                         .failureHandler((request, response, exception) -> {
+                    response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                })
         ).logout(AbstractHttpConfigurer::disable);
 
 
@@ -113,8 +118,8 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-     //   return new BCryptPasswordEncoder();
-	  return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
+	//  return NoOpPasswordEncoder.getInstance();
 
     }
 

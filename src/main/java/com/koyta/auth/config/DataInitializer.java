@@ -29,7 +29,7 @@ public class DataInitializer implements ApplicationRunner {
         boolean adminExists = userRepository.existsByRoles_Name(AppConstants.ADMIN);
 
         if (!adminExists) {
-            User admin = new User();
+             User admin = new User();
             admin.setName("Super Admin");
             admin.setEmail(AppConstants.DEFAULT_ADMIN_EMAIL);
             admin.setPassword(passwordEncoder.encode(AppConstants.DEFAULT_ADMIN_PSWD));

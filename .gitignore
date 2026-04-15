@@ -4,6 +4,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+echo "htmlReport/" >> .gitignore
+echo "*.png" >> .gitignore
+echo "logs/" >> .gitignore
+
 # Log files
 *.log
 logs/

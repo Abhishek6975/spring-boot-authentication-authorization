@@ -1,5 +1,6 @@
 package com.koyta.auth.security;
 
+import com.koyta.auth.exceptions.JwtTokenExpiredException;
 import com.koyta.auth.services.JwtService;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
@@ -53,7 +54,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
             }
 
-        } catch (JwtException ex) {
+        } catch (JwtException | JwtTokenExpiredException ex) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.setContentType("application/json");
             response.getWriter().write("{\"error\":\"Invalid or expired token\"}");

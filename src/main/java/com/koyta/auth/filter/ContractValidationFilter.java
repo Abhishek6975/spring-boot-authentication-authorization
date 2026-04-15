@@ -2,6 +2,7 @@ package com.koyta.auth.filter;
 
 
 import com.koyta.auth.contract.JsonContractValidator;
+import com.koyta.auth.exceptions.ContractValidationException;
 import com.koyta.auth.filter.wrapper.CachedBodyHttpServletRequest;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -47,7 +48,14 @@ public class ContractValidationFilter extends OncePerRequestFilter {
                     .lines()
                     .collect(Collectors.joining());
 
-            validator.validate(body, schemaMapping.get(key));
+            try {
+                validator.validate(body, schemaMapping.get(key));
+            } catch (ContractValidationException ex) {
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                response.setContentType("application/json");
+                response.getWriter().write("{\"error\": \"" + ex.getMessage() + "\"}");
+                return;
+            }
 
             request = new CachedBodyHttpServletRequest(request, body);
         }

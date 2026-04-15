@@ -17,6 +17,10 @@
     },
     "image": {
       "type": "string"
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["LOCAL", "GOOGLE", "GITHUB"]
     }
   },
   "additionalProperties": false

@@ -26,7 +26,7 @@ public class User {
     @Column(name = "version")
     private Long version;
 
-    @Column(name = "user_name",length = 500)
+    @Column(name = "user_name",length = 255)
     private String name;
     @Column(name = "user_email", unique = true)
     private String email;
@@ -50,7 +50,7 @@ public class User {
     private Set<Role> roles = new HashSet<>();
 
     @PrePersist
-    protected void onCreate(){
+    public void onCreate(){
         Instant now = Instant.now();
         if(createdAt == null)
             createdAt = now;

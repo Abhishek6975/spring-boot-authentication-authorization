@@ -1,11 +1,13 @@
 package com.koyta.auth.controllers;
 
 
-import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.dtos.AdminResponse;
+import com.koyta.auth.dtos.CreateAdminRequest;
 import com.koyta.auth.services.impl.AdminServiceImpl;
 import com.koyta.auth.util.AppConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,9 +30,9 @@ public class AdminController {
             tags = {"Admin"})
     @PreAuthorize(AppConstants.ROLE_ADMIN)
     @PostMapping("/create-admin")
-    public ResponseEntity<UserDto> createAdmin(@RequestBody UserDto userDto) {
+    public ResponseEntity<AdminResponse> createAdmin(@Valid @RequestBody CreateAdminRequest request) {
 
-        return status(HttpStatus.CREATED).body(adminService.createAdmin(userDto));
+        return status(HttpStatus.CREATED).body(adminService.createAdmin(request));
     }
 
     @Operation(
