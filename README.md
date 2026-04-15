@@ -319,7 +319,7 @@ The project maintains high test coverage using JaCoCo.
 - **Branches:** 99%+
 
 ### 📷 Coverage Report
-![img.png](img.png)
+<img width="1920" height="963" alt="Screenshot (37)" src="https://github.com/user-attachments/assets/907e75d0-01eb-4516-9cb2-fd4198511ee6" />
 
 ---
 
