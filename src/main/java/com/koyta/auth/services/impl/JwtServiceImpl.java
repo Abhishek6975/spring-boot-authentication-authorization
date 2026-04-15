@@ -98,9 +98,6 @@ public class JwtServiceImpl implements JwtService {
         } catch (JwtException e) {
 
             throw new JwtTokenExpiredException("invalid Jwt token");
-        } catch (Exception e) {
-
-            throw e;
         }
     }
 

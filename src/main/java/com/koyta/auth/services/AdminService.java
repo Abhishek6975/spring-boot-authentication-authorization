@@ -1,12 +1,13 @@
 package com.koyta.auth.services;
 
-import com.koyta.auth.dtos.UserDto;
+import com.koyta.auth.dtos.AdminResponse;
+import com.koyta.auth.dtos.CreateAdminRequest;
 
 import java.util.UUID;
 
 public interface AdminService {
 
-    public UserDto createAdmin(UserDto userDto) ;
+    public AdminResponse createAdmin(CreateAdminRequest request) ;
 
     public void assignAdminRole(UUID userId);
 }

@@ -41,41 +41,52 @@ src
 ├── main
 │   ├── java
 │   │   └── com.koyta.auth
+│   │       |
 │   │       ├── aspect
 │   │       │   └── LoggingAspect.java
-│   │       │
+│   │       |
 │   │       ├── config
 │   │       │   ├── ProjectConfig.java
 │   │       │   ├── SecurityConfig.java
 │   │       │   └── SwaggerConfig.java
-│   │       │
+│   │       |
 │   │       ├── controller
 │   │       │   └── AuthController.java
-│   │       │
+│   │       |
+│   │       ├── contract               
+│   │       │   ├── JsonContractValidator.java
+│   │       │   
+│   │       |
 │   │       ├── dto
 │   │       │   ├── LoginRequest.java
 │   │       │   ├── RefreshTokenRequest.java
 │   │       │   ├── TokenResponse.java
 │   │       │   ├── UserDto.java
 │   │       │   └── RoleDto.java
-│   │       │
+│   │
 │   │       ├── entity
 │   │       │   ├── User.java
 │   │       │   ├── Role.java
 │   │       │   ├── Provider.java
 │   │       │   └── RefreshToken.java
-│   │       │
+│   │
 │   │       ├── exception
 │   │       │   ├── GlobalExceptionHandler.java
+│   │       │   ├── ContractValidationException.java 
 │   │       │   ├── AuthenticationFailedException.java
 │   │       │   ├── JwtTokenExpiredException.java
 │   │       │   ├── ResourceNotFoundException.java
 │   │       │   └── ExistDataException.java
-│   │       │
+│   │       |
+│   │       ├── filter                 
+│   │       │   ├── ContractValidationFilter.java
+│   │       │   └── wrapper
+│   │       │       └── CachedBodyHttpServletRequest.java
+│   │       |
 │   │       ├── repository
 │   │       │   ├── UserRepository.java
 │   │       │   └── RefreshTokenRepository.java
-│   │       │
+│   │       |
 │   │       ├── security
 │   │       │   ├── JwtAuthenticationFilter.java
 │   │       │   ├── JwtService.java
@@ -83,18 +94,18 @@ src
 │   │       │   ├── CustomUserDetails.java
 │   │       │   ├── UserDetailsServiceImpl.java
 │   │       │   └── OAuth2SuccessHandler.java
-│   │       │
+│   │       |
 │   │       ├── service
 │   │       │   ├── AuthService.java
 │   │       │   ├── AuthServiceImpl.java
 │   │       │   ├── UserService.java
 │   │       │   └── UserServiceImpl.java
-│   │       │
+│   │       |
 │   │       └── util
 │   │           ├── CookieService.java
 │   │           ├── UserHelper.java
 │   │           └── AppConstants.java
-│   │
+│   |
 │   └── resources
 │       ├── application.yml
 │       ├── application-dev.yml
@@ -102,8 +113,14 @@ src
 │
 └── test
     └── java
-        └── auth
-
+        └── com.koyta.auth
+            ├── contract
+            ├── filter
+            ├── security
+            ├── service
+            ├── controller
+            ├── util
+            └── integration
 
 ```
 
@@ -162,6 +179,27 @@ Logout invalidates refresh token
 - OAuth2 login handled using OAuth2SuccessHandler
 - Role-based authorization using Spring Security
 - Passwords encrypted using BCrypt
+
+---
+
+## 📜 Contract Validation
+
+This project includes a **Contract Validation Module** to ensure request payload integrity.
+
+### ✅ Features
+- JSON request validation before controller execution
+- Centralized contract validation using filter
+- Custom `ContractValidationException`
+- Integrated with GlobalExceptionHandler
+
+### 🔄 Flow
+1. Incoming request intercepted via `ContractValidationFilter`
+2. Request body validated using `JsonContractValidator`
+3. If invalid → throws `ContractValidationException`
+4. Handled globally → returns structured error response
+
+### 📁 Location
+- com.koyta.auth.contract
 
 ---
 
@@ -234,6 +272,53 @@ http://localhost:8080/h2-console
 - JDBC URL
 - jdbc:h2:file:/data/testdb
 ----
+
+## 🧪 Testing & Coverage
+
+This project includes comprehensive test coverage:
+
+### ✔ Test Types
+- Unit Tests (Service, Utility, Security)
+- Integration Tests (Controllers)
+- Filter & Aspect Testing
+- Contract Validation Tests
+
+### ✔ Tools Used
+- JUnit 5
+- Mockito
+- MockMvc
+- JaCoCo
+
+### ✔ Coverage Focus
+- Branch Coverage (Primary focus)
+- Edge Case Handling
+- Exception Flow Coverage
+
+---
+
+## 📊 Test Coverage
+
+The project maintains high test coverage using JaCoCo.
+
+### 📌 Coverage Summary
+
+- **Classes:** 97.3%
+- **Methods:** 94.5%+
+- **Lines:** 98.2%+
+- **Branches:** 99%+
+
+### 📷 Coverage Report
+![img.png](img.png)
+
+---
+
+## ✅ Highlights
+
+- 100% Unit Test Coverage for critical services
+- Strong Branch Coverage using edge case testing
+- Production-ready exception handling
+- Secure authentication using JWT & OAuth2
+--
 
 ## 🧑‍💻 Author
 

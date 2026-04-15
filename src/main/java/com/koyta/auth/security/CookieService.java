@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
@@ -17,6 +18,7 @@ import java.util.Optional;
 @Getter
 @Setter
 @Service
+@Slf4j
 public class CookieService {
 
     private final String refreshTokenCookieName;
@@ -125,7 +127,7 @@ public class CookieService {
                         return Optional.of(candidate);
                     }
                 } catch (Exception ignored) {
-                }
+                    log.debug("Invalid refresh token in Authorization header");}
             }
         }
         return Optional.empty();

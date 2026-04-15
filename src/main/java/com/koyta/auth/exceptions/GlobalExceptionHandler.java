@@ -1,9 +1,12 @@
 package com.koyta.auth.exceptions;
 
 import com.koyta.auth.dtos.ApiError;
+import io.jsonwebtoken.JwtException;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.CredentialsExpiredException;
@@ -12,6 +15,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -20,11 +24,15 @@ public class GlobalExceptionHandler {
             UsernameNotFoundException.class,
             BadCredentialsException.class,
             CredentialsExpiredException.class,
-            AuthenticationFailedException.class
+            AuthenticationFailedException.class,
+            JwtException.class
     })
     public ResponseEntity<ApiError> handleUnauthorized(RuntimeException ex, HttpServletRequest request) {
 
-        ApiError error = ApiError.of(HttpStatus.UNAUTHORIZED.value(), "Unauthorized", ex.getMessage(),
+        ApiError error = ApiError.of(
+                HttpStatus.UNAUTHORIZED.value(),
+                "Unauthorized",
+                ex.getMessage(),
                 request.getRequestURI()
         );
 
@@ -128,4 +136,50 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ApiError> handleDbException(
+            DataIntegrityViolationException ex,
+            HttpServletRequest request) {
+
+        ApiError error = ApiError.of(
+                HttpStatus.BAD_REQUEST.value(),
+                "Database Error",
+                "Invalid data",
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.badRequest().body(error);
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<ApiError> handleTypeMismatch(
+            MethodArgumentTypeMismatchException ex,
+            HttpServletRequest request) {
+
+        ApiError error = ApiError.of(
+                HttpStatus.BAD_REQUEST.value(),
+                "Invalid parameter",
+                "Invalid value for parameter: " + ex.getName(),
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.badRequest().body(error);
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ApiError> handleMalformedJson(
+            HttpMessageNotReadableException ex,
+            HttpServletRequest request) {
+
+        ApiError error = ApiError.of(
+                HttpStatus.BAD_REQUEST.value(),
+                "Malformed JSON",
+                "Request body is invalid or malformed",
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.badRequest().body(error);
+    }
+
 }

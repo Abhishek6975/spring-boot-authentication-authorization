@@ -1,5 +1,6 @@
 package com.koyta.auth.dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.koyta.auth.entities.Provider;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -13,6 +14,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreateUserRequest {
 
     @NotBlank
