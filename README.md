@@ -323,6 +323,35 @@ The project maintains high test coverage using JaCoCo.
 
 ---
 
+## 🐳 Docker Image Optimization
+This project includes a highly optimized Docker setup to reduce image size and improve performance.
+
+### ⚙️ Optimization Strategy
+- Multi-stage Docker build (build + runtime separation)
+- Custom Java Runtime using jlink
+- Removed unnecessary dependencies:
+        - Swagger (OpenAPI UI)
+        - Spring Boot DevTools
+- Optimized Maven dependency caching
+- Reduced Docker layers
+---
+
+### Results
+### 📉 Results
+
+| Metric            | Before  | After   |
+| ----------------- | ------- | ------- |
+| Docker Image Size | ~700 MB | ~250 MB |
+
+---
+
+### 🧠 Why Optimization Matters
+- ⚡ Faster deployment
+- 💰 Lower cloud cost
+- 🔐 Better security (reduced attack surface)
+- 📦 Efficient container distribution
+---
+
 ## ✅ Highlights
 
 - 100% Unit Test Coverage for critical services
