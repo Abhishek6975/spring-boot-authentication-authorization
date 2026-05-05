@@ -1,0 +1,26 @@
+# build
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS builder
+WORKDIR /app
+COPY pom.xml .
+RUN mvn dependency:go-offline
+COPY src ./src
+RUN mvn package -DskipTests -P test
+
+# custom jre
+RUN jlink \
+  --add-modules java.base,java.logging,java.sql,java.naming,java.xml,java.management,java.security.jgss,java.instrument,java.desktop,jdk.crypto.ec,jdk.unsupported \
+  --strip-debug \
+  --no-man-pages \
+  --no-header-files \
+  --compress=2 \
+  --output /jre
+
+# run
+FROM alpine
+WORKDIR /app
+COPY --from=builder /jre /jre
+COPY --from=builder /app/target/*.jar app.jar
+ENV PATH="/jre/bin:$PATH"
+ENV JAVA_HOME="/jre"
+
+ENTRYPOINT ["java","-jar","app.jar"]

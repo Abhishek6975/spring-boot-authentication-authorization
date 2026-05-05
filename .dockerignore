@@ -1,0 +1,8 @@
+target/
+.git
+.gitignore
+logs/
+*.log
+htmlReport/
+node_modules/
+README.md
